@@ -10,56 +10,90 @@
 		<link rel="stylesheet" type="text/css" charset="utf-8" href="css/style.css" />
 	</head>
 	<body>
-		<gimmick class="weakness">
-			<label>Dumm</label>
+		<gimmick class="team">
+			<label>Racist</label>
 			<tier class="exclusive">0</tier>
-			<rules>kann keine Magieschule und kein Wissensgebiet lernen</rules>
+			<rules>Team may not mix races. +1 Damage against other races.</rules>
+		</gimmick>
+		<gimmick class="team">
+			<label>Disposable Forces</label>
+			<tier class="exclusive">0</tier>
+			<rules>Designate a leader. Other team members have - 1 on melee and ranged checks and do not recover. They die right away and respawn in the starting location</rules>
+		</gimmick>
+		<gimmick class="race">
+			<label>Elf</label>
+			<tier class="exclusive">0</tier>
+			<rules>+1 on ranged and movement checks. May not support or be supported.</rules>
+		</gimmick>
+		<gimmick class="race">
+			<label>Orc</label>
+			<tier class="exclusive">0</tier>
+			<rules>+1 on melee checks. May not recover.</rules>
+		</gimmick>
+		<gimmick class="race">
+			<label>Dwarf</label>
+			<tier class="exclusive">0</tier>
+			<rules>-1 on movement checks. +1 on recover checks.</rules>
+		</gimmick>
+		<gimmick class="team">
+			<label>Law enforcers</label>
+			<tier class="exclusive">0</tier>
+			<rules>May not strike first. Every team member starts with a light armor gimmick for free.</rules>
+		</gimmick>
+		<gimmick class="team">
+			<label>Outlaws</label>
+			<tier class="exclusive">0</tier>
+			<rules>May not buy gear during level-up. Keep salvaged gear permanently.</rules>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Dumb</label>
+			<tier class="exclusive">0</tier>
+			<rules>May not use magic or science</rules>
 		</gimmick>
 		<gimmick class="weakness melee">
-			<label>Unterlegen</label>
+			<label>Inferior</label>
 			<tier class="exclusive">0</tier>
-			<rules>-1 auf Nahkampfproben</rules>
+			<rules>-1 to melee checks</rules>
 		</gimmick>
 		<gimmick class="weakness karma">
-			<label>Ehre</label>
+			<label>Honor</label>
 			<tier class="and-higher">1</tier>
-			<rules>kann niemanden Angreifen, der von einem Verbündeten angegriffen wird; kann keinen Fernkampfangriffe auf Flüchtende ausführen</rules>
+			<rules>May not support or be supported in melee attacks. May not shoot running models.</rules>
 		</gimmick>
 		<gimmick class="powerup karma">
-			<label>Ehrfurcht</label>
+			<label>Awe</label>
 			<tier class="and-higher">3</tier>
-			<rules>kann nicht von mehreren Gegnern gleichzeitig angegriffen werden.</rules>
+			<rules>May not be attacked by multiple opponents</rules>
 		</gimmick>
 		<gimmick class="powerup karma">
-			<label>Unverwundbarkeit</label>
+			<label>Invulnerable</label>
 			<tier class="and-higher">4</tier>
-			<variant>Bad in Drachenblut</variant>
-			<rules>erleidet keinen Schaden, es sei denn dieser beträgt genau 5</rules>
+			<rules>Does not take damage except it is 4 exactly.</rules>
 		</gimmick>
 		<gimmick class="weakness">
-			<label>Kurze Beine</label>
+			<label>Short legs</label>
 			<tier class="exclusive">0</tier>
-			<rules>-1 auf Bewegungsweite</rules>
+			<rules>-1 on movement checks</rules>
 		</gimmick>
 		<gimmick class="weakness">
-			<label>Träge</label>
+			<label>Sloth</label>
 			<tier class="exclusive">0</tier>
-			<rules>kann in der ersten Kampfrunde höchstens reagieren, und auch nur, wenn eine Aktion ihn direkt betrifft</rules>
+			<rules>May not act on the first round</rules>
 		</gimmick>
 		<gimmick class="weakness">
-			<label>Verkrüppelt</label>
+			<label>Crippled</label>
 			<tier class="and-higher">1</tier>
-			<rules>-1 auf Bewegungsweite</rules>
+			<rules>-1 on movement checks</rules>
 		</gimmick>
 		<gimmick class="weakness karma">
-			<label>Üblicher Verdächtiger</label>
+			<label>Usual suspect</label>
 			<tier class="and-higher">0</tier>
-			<rules>Ordnungshüter kontrollieren und gängeln sie / ihn, sobald sie sie / ihn sehen</rules>
+			<rules>Law enforcers +1 on checks attacking this model</rules>
 		</gimmick>
 		<gimmick class="weakness">
-			<label>Memme</label>
+			<label>Wimpy</label>
 			<tier class="and-higher">0</tier>
-			<rules>-1 auf alle Proben, wenn AP unter die Hälfte sinken</rules>
+			<rules>-1 on all checks after recovering</rules>
 		</gimmick>
 		<gimmick class="weakness">
 			<label>Blutarm</label>
@@ -107,14 +141,14 @@
 			<rules>muss für Unterbringung und Verpflegung Reichtum aufbringen, ist sonst auf Almosen angewiesen</rules>
 		</gimmick>
 		<gimmick class="powerup">
-			<label>Willenskraft</label>
+			<label>Willpower</label>
 			<tier class="exclusive">0</tier>
-			<rules>erhält 3 WP (Willenspunkte), die sie / er wie AP für Aktionen einsetzen kann, die aber nicht durch Schaden reduziert werden</rules>
+			<rules>1 extra use for a 1 use gimmick</rules>
 		</gimmick>
 		<gimmick class="powerup karma">
-			<label>Harmlos</label>
+			<label>Harmless</label>
 			<tier class="exclusive">0</tier>
-			<rules>wird von intelligenten Wesen erst angegriffen, wenn sie / er selbst angreift</rules>
+			<rules>May not be attacked until it attacks itself</rules>
 		</gimmick>
 		<gimmick class="gear">
 			<label>Spezialausrüstung</label>
@@ -125,9 +159,9 @@
 			<rules>eröffnet Spieloptionen</rules>
 		</gimmick>
 		<gimmick class="powerup movement">
-			<label>Akrobat</label>
+			<label>Acrobat</label>
 			<tier class="and-higher">1</tier>
-			<rules>+1 auf Bewegungsproben für 1 AP</rules>
+			<rules>+1 on movement checks</rules>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Aufmerksam</label>
@@ -265,14 +299,14 @@
 			<rules>Rüstung +1, und diverse Kampfoptionen (siehe Kampf und Fähigkeiten)</rules>
 		</gimmick>
 		<gimmick class="powerup">
-			<label>Kämpfertyp</label>
+			<label>Fighting Nature</label>
 			<tier class="exclusive">0</tier>
-			<rules>+1 auf alle Proben, wenn AP unter die Hälfte sinken</rules>
+			<rules>+1 on all checks after recovering</rules>
 		</gimmick>
 		<gimmick class="gear armour">
-			<label>Helm</label>
+			<label>Helmet</label>
 			<tier class="and-higher">0</tier>
-			<rules>Rüstung +1, -1 auf Wahrnehmungsproben</rules>
+			<rules>Ignore incomming damage once</rules>
 		</gimmick>
 		<gimmick class="gear magical">
 			<label>Talisman</label>
