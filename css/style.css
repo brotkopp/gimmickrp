@@ -56,6 +56,22 @@ gimmick.powerup:before{
 	content: url("../img/powerup.png");
 }
 
+gimmick.team{
+	background: linear-gradient( 0deg , rgba( 111 , 149 , 19 , 0.15 ) , rgba( 111 , 149 , 19 , 0.0 ) );
+}
+
+gimmick.team:before{
+	content: url("../img/team.png");
+}
+
+gimmick.race{
+	background: linear-gradient( 0deg , rgba( 149 , 66 , 55 , 0.15 ) , rgba( 149 , 66 , 55 , 0.0 ) );
+}
+
+gimmick.race:before{
+	content: url("../img/race.png");
+}
+
 label{
 	font-size: 1.5em;
 }
