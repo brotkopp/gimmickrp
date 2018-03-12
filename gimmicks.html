@@ -31,6 +31,11 @@
 			<rules>+1 on melee checks. May not recover.</rules>
 		</gimmick>
 		<gimmick class="race">
+			<label>Ogre</label>
+			<tier class="exclusive">0</tier>
+			<rules>-1 on all checks, +2 melee damage, +2 armour</rules>
+		</gimmick>
+		<gimmick class="race">
 			<label>Dwarf</label>
 			<tier class="exclusive">0</tier>
 			<rules>-1 on movement checks. +1 on recover checks.</rules>
@@ -38,7 +43,7 @@
 		<gimmick class="team">
 			<label>Law enforcers</label>
 			<tier class="exclusive">0</tier>
-			<rules>May not strike first. Every team member starts with a light armor gimmick for free.</rules>
+			<rules>May not strike first. Every team member starts with a light armour gimmick for free.</rules>
 		</gimmick>
 		<gimmick class="team">
 			<label>Outlaws</label>
@@ -218,12 +223,9 @@
 			<rules>Schaden +2</rules>
 		</gimmick>
 		<gimmick class="gear armour clothing">
-			<label>Leichte Rüstung</label>
+			<label>Light Armour</label>
 			<tier class="and-higher">0</tier>
-			<variant>Waffenrock</variant>
-			<variant>Lederrüstung</variant>
-			<variant>Kettenhemd</variant>
-			<rules>alternativ zu schwerer Rüstung, Rüstung +4</rules>
+			<rules>+1 Armour, may not be used with heavy armour</rules>
 		</gimmick>
 		<gimmick class="gear">
 			<label>Foliant der Magie</label>
@@ -279,9 +281,9 @@
 			<rules>Gegner treten mit den Geistern in Konkurrenz (1 Wurf, unmodifiziert), sobald sie den Charakter angreifen</rules>
 		</gimmick>
 		<gimmick class="powerup">
-			<label>Kaltherzig</label>
+			<label>Cold blooded</label>
 			<tier class="and-higher">2</tier>
-			<rules>+ 1 auf Angriffsproben ohne Gegenwehr oder Verteidigung</rules>
+			<rules>+1 on attacks that are unhindered</rules>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Universalgelehrter</label>
@@ -294,14 +296,24 @@
 			<rules>ermöglicht Zugang zu einem der Wissensgebiete</rules>
 		</gimmick>
 		<gimmick class="gear">
-			<label>Schild</label>
+			<label>Shield</label>
 			<tier class="and-higher">0</tier>
-			<rules>Rüstung +1, und diverse Kampfoptionen (siehe Kampf und Fähigkeiten)</rules>
+			<rules>Armour +1, only used with one-handed weapons, allows melee defense against ranged attacks</rules>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Fighting Nature</label>
 			<tier class="exclusive">0</tier>
 			<rules>+1 on all checks after recovering</rules>
+		</gimmick>
+		<gimmick class="team">
+			<label>Superior Beings</label>
+			<tier class="exclusive">0</tier>
+			<rules>1 free gimmick for every team member, 2 less models on the team</rules>
+		</gimmick>
+		<gimmick class="team">
+			<label>Tournament Spirit</label>
+			<tier class="exclusive">0</tier>
+			<rules>Starts the game with 0 endurance, gains 2 endurance points on the end of every turn</rules>
 		</gimmick>
 		<gimmick class="gear armour">
 			<label>Helmet</label>
@@ -372,21 +384,19 @@
 			<rules>eröffnet Spieloptionen</rules>
 		</gimmick>
 		<gimmick class="gear armour clothing">
-			<label>Schwere Rüstung</label>
+			<label>Heavy Armour</label>
 			<tier class="and-higher">1</tier>
-			<variant>Schuppenpanzer</variant>
-			<variant>Plattenrüstung</variant>
-			<rules>alternativ zu leichter Rüstung, Rüstung +8, Bewegungsweite -1</rules>
+			<rules>Armour + 2, may not be used with light armour, movement -1</rules>
 		</gimmick>
 		<gimmick class="powerup melee">
-			<label>Beschützer</label>
+			<label>Protector</label>
 			<tier class="and-higher">1</tier>
-			<rules>kann mit defensiven Nahkampfaktionen Gegner behindern, auch wenn sie sie oder ihn nicht angreifen</rules>
+			<rules>May interfere with any melee attack in range</rules>
 		</gimmick>
 		<gimmick class="powerup melee">
 			<label>Blocker</label>
 			<tier class="and-higher">1</tier>
-			<rules>benötigt Schild, +1 auf defensive Nahkampfproben für 1 AP</rules>
+			<rules>requires shield, +1 on reactive melee check for 1 endurance</rules>
 		</gimmick>
 		<gimmick class="powerup melee">
 			<label>Berserker</label>
