@@ -89,6 +89,10 @@ tier.exclusive:after{
 	content: " (ausschließlich)";
 }
 
+.discuss-marker{
+	color: #aa3333;
+}
+
 variant:after{
 	content: ", ";
 }
