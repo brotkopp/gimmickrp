@@ -10,150 +10,321 @@
 		<link rel="stylesheet" type="text/css" charset="utf-8" href="css/style.css" />
 	</head>
 	<body>
-		<gimmick class="team">
+		<!--<gimmick class="team discuss-marker">
 			<label>Racist</label>
 			<tier class="exclusive">0</tier>
-			<rules>Team may not mix races. +1 Damage against other races.</rules>
-		</gimmick>
+			<rule>Team may not mix races. +1 Damage against other races. (this does not work anymore)</rule>
+		</gimmick>-->
 		<gimmick class="team">
 			<label>Disposable Forces</label>
 			<tier class="exclusive">0</tier>
-			<rules>Designate a leader. Other team members have - 1 on melee and ranged checks and do not recover. They die right away and respawn in the starting location</rules>
+			<rule>Designate a leader. Other team members have - 1 on melee and ranged checks and do not recover. They die right away and respawn in the starting location as long as the leader lives. These models do not roll win or lose dice, the leader rolls 2 of them.</rule>
+		</gimmick>
+		<gimmick class="team">
+			<label>Rampage</label>
+			<tier class="and-higher">1</tier>
+			<rule>The team gains 1 AP for each opponent it brings down or puts out of action and each structure it destroys.</rule>
+		</gimmick>
+		<gimmick class="team">
+			<label>Second Wind</label>
+			<tier class="and-higher">1</tier>
+			<rule>The team gains 1 AP for each member that recovers.</rule>
+		</gimmick>
+		<gimmick class="team">
+			<label>Vengeance</label>
+			<tier class="and-higher">1</tier>
+			<rule>The team gains 1 AP for each member that is put out of action.</rule>
+		</gimmick>
+		<gimmick class="team">
+			<label>Reactive Tactics</label>
+			<tier class="and-higher">0</tier>
+			<rule>The team starts with 0 AP and gains 1 AP for each AP another team spends</rule>
+		</gimmick>
+		<gimmick class="powerup">
+			<label>Motivated</label>
+			<tier class="and-higher">0</tier>
+			<rule>The team of this model starts off with 1 more AP.</rule>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Hesitant</label>
+			<tier class="and-higher">0</tier>
+			<rule>The team of this model starts off with 1 less AP.</rule>
+		</gimmick>
+		<gimmick class="powerup">
+			<label>Untiring</label>
+			<tier class="and-higher">2</tier>
+			<rule>On taking initiative the model may choose not to spend 1 AP by waiving the +1 Bonus on its action.</rule>
 		</gimmick>
 		<gimmick class="race">
 			<label>Elf</label>
 			<tier class="exclusive">0</tier>
-			<rules>+1 on ranged and movement checks. May not support or be supported.</rules>
+			<rule>+1 on ranged and movement checks. May not support or be supported.</rule>
+		</gimmick>
+		<gimmick class="race">
+			<label>Dog</label>
+			<tier class="exclusive">0</tier>
+			<rule>Can not use gear. Has +3 on movement range while moving or in melee.</rule>
 		</gimmick>
 		<gimmick class="race">
 			<label>Orc</label>
 			<tier class="exclusive">0</tier>
-			<rules>+1 on melee checks. May not recover.</rules>
+			<rule>+1 on melee checks, any action besides movement and melee takes 1 AP</rule>
 		</gimmick>
 		<gimmick class="race">
+			<label>Undead</label>
+			<tier class="exclusive">0</tier>
+			<rule>Immune to Awe and Poison, +1 to armour, may not recover</rule>
+		</gimmick>
+		<gimmick class="race discuss-marker">
 			<label>Ogre</label>
 			<tier class="exclusive">0</tier>
-			<rules>-1 on all checks, +2 melee damage, +2 armour</rules>
+			<rule>-1 on all checks. Ignores hits with a success value below 3. Puts smaller targets out of action on hit.</rule>
 		</gimmick>
 		<gimmick class="race">
 			<label>Dwarf</label>
 			<tier class="exclusive">0</tier>
-			<rules>-1 on movement checks. +1 on recover checks.</rules>
+			<rule>-1 on movement. +1 on recover checks.</rule>
 		</gimmick>
 		<gimmick class="team">
 			<label>Law enforcers</label>
 			<tier class="exclusive">0</tier>
-			<rules>May not strike first. Every team member starts with a light armour gimmick for free.</rules>
+			<rule>May not strike first. Every team member starts with a light armour gimmick for free.</rule>
 		</gimmick>
 		<gimmick class="team">
 			<label>Outlaws</label>
 			<tier class="exclusive">0</tier>
-			<rules>May not buy gear during level-up. Keep salvaged gear permanently.</rules>
+			<rule>May not spend riches. A 1 on the win table recruits a new team member even beyond its maximum size.</rule>
 		</gimmick>
 		<gimmick class="weakness">
 			<label>Dumb</label>
 			<tier class="exclusive">0</tier>
-			<rules>May not use magic or science</rules>
+			<rule>May not use magic or science</rule>
 		</gimmick>
 		<gimmick class="weakness melee">
 			<label>Inferior</label>
 			<tier class="exclusive">0</tier>
-			<rules>-1 to melee checks</rules>
+			<rule>-1 to melee checks</rule>
 		</gimmick>
 		<gimmick class="weakness karma">
 			<label>Honor</label>
 			<tier class="and-higher">1</tier>
-			<rules>May not support or be supported in melee attacks. May not shoot running models.</rules>
+			<rule>May not support or be supported in melee attacks. May not shoot running models.</rule>
 		</gimmick>
 		<gimmick class="powerup karma">
 			<label>Awe</label>
 			<tier class="and-higher">3</tier>
-			<rules>May not be attacked by multiple opponents</rules>
+			<rule>May not be attacked by multiple opponents</rule>
 		</gimmick>
 		<gimmick class="powerup karma">
 			<label>Invulnerable</label>
 			<tier class="and-higher">4</tier>
-			<rules>Does not take damage except it is 4 exactly.</rules>
+			<rule>Does not take damage except it is 4 exactly.</rule>
 		</gimmick>
 		<gimmick class="weakness">
 			<label>Short legs</label>
 			<tier class="exclusive">0</tier>
-			<rules>-1 on movement checks</rules>
+			<rule>-1 on movement checks</rule>
 		</gimmick>
 		<gimmick class="weakness">
 			<label>Sloth</label>
 			<tier class="exclusive">0</tier>
-			<rules>May not act on the first round</rules>
+			<rule>May not act on the first round</rule>
 		</gimmick>
 		<gimmick class="weakness">
 			<label>Crippled</label>
 			<tier class="and-higher">1</tier>
-			<rules>-1 on movement checks</rules>
+			<rule>-1 on movement checks</rule>
 		</gimmick>
 		<gimmick class="weakness karma">
 			<label>Usual suspect</label>
 			<tier class="and-higher">0</tier>
-			<rules>Law enforcers +1 on checks attacking this model</rules>
+			<rule>Law enforcers +1 on checks attacking this model</rule>
 		</gimmick>
 		<gimmick class="weakness">
 			<label>Wimpy</label>
 			<tier class="and-higher">0</tier>
-			<rules>-1 on all checks after recovering</rules>
-		</gimmick>
-		<gimmick class="weakness">
-			<label>Blutarm</label>
-			<tier class="exclusive">0</tier>
-			<rules>-2 auf AP</rules>
-		</gimmick>
-		<gimmick class="weakness">
-			<label>Schwache Schultern</label>
-			<tier class="exclusive">0</tier>
-			<rules>erhält in Rüstung -1 auf alle Proben</rules>
-		</gimmick>
-		<gimmick class="weakness">
-			<label>Kränklich</label>
-			<tier class="and-higher">0</tier>
-			<rules>regeneriert AP nur in einem ordentlichen Bett mit genug Zeit</rules>
-		</gimmick>
-		<gimmick class="weakness">
-			<label>Empfindlich</label>
-			<tier class="and-higher">0</tier>
-			<rules>erlittener Schaden ist um 1 erhöht</rules>
-		</gimmick>
-		<gimmick class="powerup melee">
-			<label>Meucheln</label>
-			<tier class="and-higher">2</tier>
-			<rules>Angriff ohne Einmischung mit Schaden * 2 für 4 AP</rules>
-		</gimmick>
-		<gimmick class="powerup melee">
-			<label>Riposte</label>
-			<tier class="and-higher">1</tier>
-			<rules>+1 auf aggressive Nahkampfproben gegen angreifende Gegner ohne Riposte, verleiht Riposte</rules>
+			<rule>-1 on all checks after recovering</rule>
 		</gimmick>
 		<gimmick class="powerup">
-			<label>Händler</label>
+			<label>Field Medic</label>
 			<tier class="and-higher">0</tier>
-			<rules>Kann durch Verhandlung den Verlust von Reichtum verhindern</rules>
+			<rule>May for 1 AP recover another model without doing a check or being hindered.</rule>
 		</gimmick>
 		<gimmick class="powerup melee">
-			<label>Finte</label>
+			<label>Assassin</label>
 			<tier class="and-higher">2</tier>
-			<rules>Kann für 1 AP nach Ermittlung aller Aktionen und Reaktionen das Ziel seines Nahkampfangriffes wechseln</rules>
+			<rule>Delays entry of battle field. As the acting model may enter the battle field by attacking any model on the field either ranged or melee.</rule>
 		</gimmick>
-		<gimmick class="weakness">
-			<label>Arm</label>
+		<gimmick class="powerup">
+			<label>Leadership</label>
 			<tier class="and-higher">0</tier>
-			<rules>muss für Unterbringung und Verpflegung Reichtum aufbringen, ist sonst auf Almosen angewiesen</rules>
+			<rule>+1 on interfering initiative checks</rule>
+		</gimmick>
+		<gimmick class="powerup melee">
+			<label>Faint</label>
+			<tier class="and-higher">1</tier>
+			<rule>May redirect its action or reaction after all has been determined for 1 AP</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Willpower</label>
 			<tier class="exclusive">0</tier>
-			<rules>1 extra use for a 1 use gimmick</rules>
+			<rule>1 extra use for a 1 use gimmick</rule>
 		</gimmick>
 		<gimmick class="powerup karma">
 			<label>Harmless</label>
 			<tier class="exclusive">0</tier>
-			<rules>May not be attacked until it attacks itself</rules>
+			<rule>May not be attacked until it attacks itself</rule>
+		</gimmick>
+		<gimmick class="powerup movement">
+			<label>Acrobat</label>
+			<tier class="and-higher">1</tier>
+			<rule>+1 on movement checks</rule>
+		</gimmick>
+		<gimmick class="gear weapon ranged">
+			<label>Ranged Weapon</label>
+			<tier class="and-higher">0</tier>
+			<variant>bow</variant>
+			<variant>sling</variant>
+			<variant>pistol</variant>
+			<rule>enables ranged attacks, 2-handed</rule>
+		</gimmick>
+		<gimmick class="gear weapon ranged">
+			<label>Area Damage</label>
+			<tier class="and-higher">0</tier>
+			<variant>machine gun</variant>
+			<variant>flame thrower</variant>
+			<variant>rocket launcher</variant>
+			<variant>granade</variant>
+			<rule>enables ranged attacks, -1 on ranged checks, delivers damage to up to 3 targets in a radius of 3</rule>
+		</gimmick>
+		<gimmick class="powerup discuss-marker">
+			<label>Poison</label>
+			<tier class="and-higher">1</tier>
+			<rule>The first target hit dies at the end of the battle</rule>
+		</gimmick>
+		<gimmick class="gear weapon ranged">
+			<label>Armour Piercing Ranged Weapon</label>
+			<tier class="and-higher">1</tier>
+			<variant>crossbow</variant>
+			<variant>sniper rifle</variant>
+			<rule>enables ranged attacks, ignores targets armour</rule>
+		</gimmick>
+		<gimmick class="weakness weapon melee">
+			<label>Unarmed</label>
+			<tier class="and-higher">0</tier>
+			<rule>-1 on melee checks</rule>
+		</gimmick>
+		<gimmick class="powerup ranged">
+			<label>Pistolero</label>
+			<tier class="and-higher">1</tier>
+			<rule>May perform 2 ranged attacks as 1 action for 1 AP</rule>
+		</gimmick>
+		<gimmick class="gear weapon melee">
+			<label>Heavy Melee Weapon</label>
+			<tier class="and-higher">0</tier>
+			<variant>axe</variant>
+			<variant>hammer</variant>
+			<rule>Inflicts heavy melee damage.</rule>
+		</gimmick>
+		<gimmick class="gear weapon melee">
+			<label>Superior Melee Weapon</label>
+			<tier class="and-higher">0</tier>
+			<variant>long sword</variant>
+			<variant>spear</variant>
+			<rule>+1 on melee checks</rule>
+		</gimmick>
+		<gimmick class="gear armour clothing">
+			<label>Light Armour</label>
+			<tier class="and-higher">0</tier>
+			<rule>May spend 1 AP to ignore a regular hit.</rule>
+		</gimmick>
+		<gimmick class="powerup">
+			<label>Cold blooded</label>
+			<tier class="and-higher">2</tier>
+			<rule>+1 on attacks that are unhindered</rule>
+		</gimmick>
+		<gimmick class="gear">
+			<label>Shield</label>
+			<tier class="and-higher">0</tier>
+			<rule>May be disposed to ignore any melee hit.</rule>
+			<rule>Allows melee defense against ranged attacks.</rule>
+		</gimmick>
+		<gimmick class="powerup">
+			<label>Fighting Nature</label>
+			<tier class="exclusive">0</tier>
+			<rule>+1 on all checks after recovering</rule>
+		</gimmick>
+		<gimmick class="team">
+			<label>Superior Beings</label>
+			<tier class="exclusive">0</tier>
+			<rule>1 free gimmick for every team member, 2 less models on the team</rule>
+		</gimmick>
+		<gimmick class="gear armour">
+			<label>Helmet</label>
+			<tier class="and-higher">0</tier>
+			<rule>Ignore incomming damage once</rule>
+		</gimmick>
+		<gimmick class="gear armour clothing">
+			<label>Heavy Armour</label>
+			<tier class="and-higher">1</tier>
+			<rule>May spend 1 AP to ignore a regular or heavy hit.</rule>
+		</gimmick>
+		<gimmick class="powerup melee">
+			<label>Protector</label>
+			<tier class="and-higher">1</tier>
+			<rule>May move up to 6 inches in order to protect another model in melee</rule>
+		</gimmick>
+		<gimmick class="powerup melee">
+			<label>Blocker</label>
+			<tier class="and-higher">1</tier>
+			<rule>requires shield, +1 on reactive melee check</rule>
+		</gimmick>
+		<gimmick class="powerup melee">
+			<label>Berserk</label>
+			<tier class="and-higher">1</tier>
+			<rule>May perform a melee attack between turns for 1 AP without being interfered or supported. May  not interfere with any action in the following turn.</rule>
+		</gimmick>
+		<gimmick class="powerup movement">
+			<label>Fleet of Foot</label>
+			<tier class="and-higher">1</tier>
+			<rule>May perform a movement action between turns for 1 AP without being interfered or supported.</rule>
+		</gimmick>
+		<gimmick class="powerup melee">
+			<label>Savage Blow</label>
+			<tier class="and-higher">1</tier>
+			<rule>Making the damage of the next melee attack unrecoverable for 1 AP</rule>
+		</gimmick>
+		
+		<!--
+		<gimmick class="powerup melee">
+			<label>Riposte</label>
+			<tier class="and-higher">1</tier>
+			<rule>+1 auf aggressive Nahkampfproben gegen angreifende Gegner ohne Riposte, verleiht Riposte</rule>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Blutarm</label>
+			<tier class="exclusive">0</tier>
+			<rule>-2 auf AP</rule>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Schwache Schultern</label>
+			<tier class="exclusive">0</tier>
+			<rule>erhält in Rüstung -1 auf alle Proben</rule>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Kränklich</label>
+			<tier class="and-higher">0</tier>
+			<rule>regeneriert AP nur in einem ordentlichen Bett mit genug Zeit</rule>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Empfindlich</label>
+			<tier class="and-higher">0</tier>
+			<rule>erlittener Schaden ist um 1 erhöht</rule>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Arm</label>
+			<tier class="and-higher">0</tier>
+			<rule>muss für Unterbringung und Verpflegung Reichtum aufbringen, ist sonst auf Almosen angewiesen</rule>
 		</gimmick>
 		<gimmick class="gear">
 			<label>Spezialausrüstung</label>
@@ -161,86 +332,41 @@
 			<variant>Minenarbeiterwerkzeug</variant>
 			<variant>Bergsteigerausrüstung</variant>
 			<variant>Reiselabor</variant>
-			<rules>eröffnet Spieloptionen</rules>
-		</gimmick>
-		<gimmick class="powerup movement">
-			<label>Acrobat</label>
-			<tier class="and-higher">1</tier>
-			<rules>+1 on movement checks</rules>
+			<rule>eröffnet Spieloptionen</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Aufmerksam</label>
 			<tier class="exclusive">0</tier>
-			<rules>+1 auf Wahrnehmungsproben</rules>
+			<rule>+1 auf Wahrnehmungsproben</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Vital</label>
 			<tier class="exclusive">0</tier>
-			<rules>+2 auf AP</rules>
+			<rule>+2 auf AP</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Mutig</label>
 			<tier class="exclusive">0</tier>
-			<rules>Darf die Effekte von Furcht und Panik ignorieren für 1 AP</rules>
+			<rule>Darf die Effekte von Furcht und Panik ignorieren für 1 AP</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Überraschung</label>
 			<tier class="and-higher">1</tier>
-			<rules>Erhält in der ersten Kampfrunde +1 pro investiertem AP auf Initiativeproben</rules>
-		</gimmick>
-		<gimmick class="gear weapon ranged">
-			<label>Leichte Fernkampfwaffe</label>
-			<tier class="and-higher">0</tier>
-			<variant>Kurzbogen</variant>
-			<variant>Schleuder</variant>
-			<rules>ermöglicht Fernkampfangriffe, 2händig</rules>
-		</gimmick>
-		<gimmick class="gear weapon melee">
-			<label>Kampfstab</label>
-			<tier class="and-higher">0</tier>
-			<rules>Nahkampfprobe +1, Schaden -2, 2händig</rules>
-		</gimmick>
-		<gimmick class="gear weapon melee">
-			<label>Stichwaffe</label>
-			<tier class="and-higher">0</tier>
-			<variant>Rapier</variant>
-			<variant>Degen</variant>
-			<rules>Nahkampfprobe +1</rules>
-		</gimmick>
-		<gimmick class="gear weapon melee">
-			<label>Kleine Klingenwaffe</label>
-			<tier class="and-higher">0</tier>
-			<variant>Kurzschwert</variant>
-			<variant>Säbel</variant>
-			<variant>Dolch</variant>
-			<rules>Schaden * 2</rules>
-		</gimmick>
-		<gimmick class="gear weapon melee">
-			<label>Kleine Hiebwaffe</label>
-			<tier class="and-higher">0</tier>
-			<variant>Beil</variant>
-			<variant>Keule</variant>
-			<rules>Schaden +2</rules>
-		</gimmick>
-		<gimmick class="gear armour clothing">
-			<label>Light Armour</label>
-			<tier class="and-higher">0</tier>
-			<rules>+1 Armour, may not be used with heavy armour</rules>
-		</gimmick>
-		<gimmick class="gear">
+			<rule>Erhält in der ersten Kampfrunde +1 pro investiertem AP auf Initiativeproben</rule>
+		</gimmick><gimmick class="gear">
 			<label>Foliant der Magie</label>
 			<tier class="and-higher">0</tier>
-			<rules>ermöglicht Zugang zu einer der Magieschulen</rules>
+			<rule>ermöglicht Zugang zu einer der Magieschulen</rule>
 		</gimmick>
 		<gimmick class="weakness karma">
 			<label>Opfer</label>
 			<tier class="and-higher">0</tier>
-			<rules>Kriminelle bestehlen oder überfallen sie / ihn immer als ersten</rules>
+			<rule>Kriminelle bestehlen oder überfallen sie / ihn immer als ersten</rule>
 		</gimmick>
 		<gimmick class="powerup karma">
 			<label>Autorität</label>
 			<tier class="and-higher">1</tier>
-			<rules>Bei Verhandlungen mit mehreren Gegnern, können höchstens 2 in Konkurrenz treten</rules>
+			<rule>Bei Verhandlungen mit mehreren Gegnern, können höchstens 2 in Konkurrenz treten</rule>
 		</gimmick>
 		<gimmick class="gear">
 			<label>Insignie der Herrschaft</label>
@@ -248,112 +374,82 @@
 			<variant>Zepter</variant>
 			<variant>Banner</variant>
 			<variant>Wappenrock</variant>
-			<rules>+ 1 auf Verhandlungsproben wenn es um das Erteilen von Befehlen geht</rules>
+			<rule>+ 1 auf Verhandlungsproben wenn es um das Erteilen von Befehlen geht</rule>
 		</gimmick>
 		<gimmick class="weakness karma">
 			<label>Grausam</label>
 			<tier class="and-higher">1</tier>
-			<rules>Wenn darum gebeten, darf sie / er keine Gnade gewähren</rules>
+			<rule>Wenn darum gebeten, darf sie / er keine Gnade gewähren</rule>
 		</gimmick>
 		<gimmick class="weakness karma">
 			<label>Treulos</label>
 			<tier class="and-higher">1</tier>
-			<rules>Verlässt das Kampfgeschehen, sobald mindestens einem Gefährten die AP auf 0 sinken</rules>
+			<rule>Verlässt das Kampfgeschehen, sobald mindestens einem Gefährten die AP auf 0 sinken</rule>
 		</gimmick>
 		<gimmick class="weakness karma">
 			<label>Heimsuchung</label>
 			<tier class="and-higher">2</tier>
-			<rules>Gegner erhalten im Kampf Unterstützung durch eine Einbildung des Charakters, welche ihrerseits immer einen Würfel mit in die Konkurrenz wirft</rules>
+			<rule>Gegner erhalten im Kampf Unterstützung durch eine Einbildung des Charakters, welche ihrerseits immer einen Würfel mit in die Konkurrenz wirft</rule>
 		</gimmick>
 		<gimmick class="weakness karma">
 			<label>Gezeichnet</label>
 			<tier class="and-higher">1</tier>
-			<rules>Andere verweigern die Kommunikation, sofern sie nicht einiges zusammen durchgemacht haben</rules>
+			<rule>Andere verweigern die Kommunikation, sofern sie nicht einiges zusammen durchgemacht haben</rule>
 		</gimmick>
 		<gimmick class="weakness">
 			<label>Schlachtwahn</label>
 			<tier class="and-higher">2</tier>
-			<rules>Er / sie kann einen Kampf erst beenden, wenn er / sie 0 AP hat</rules>
+			<rule>Er / sie kann einen Kampf erst beenden, wenn er / sie 0 AP hat</rule>
 		</gimmick>
 		<gimmick class="powerup karma">
 			<label>Schutz der Geister</label>
 			<tier class="and-higher">2</tier>
-			<rules>Gegner treten mit den Geistern in Konkurrenz (1 Wurf, unmodifiziert), sobald sie den Charakter angreifen</rules>
-		</gimmick>
-		<gimmick class="powerup">
-			<label>Cold blooded</label>
-			<tier class="and-higher">2</tier>
-			<rules>+1 on attacks that are unhindered</rules>
+			<rule>Gegner treten mit den Geistern in Konkurrenz (1 Wurf, unmodifiziert), sobald sie den Charakter angreifen</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Universalgelehrter</label>
 			<tier class="and-higher">2</tier>
-			<rules>+ 1 auf alle Wissensproben</rules>
+			<rule>+ 1 auf alle Wissensproben</rule>
 		</gimmick>
 		<gimmick class="gear">
 			<label>Foliant des Wissens</label>
 			<tier class="and-higher">0</tier>
-			<rules>ermöglicht Zugang zu einem der Wissensgebiete</rules>
-		</gimmick>
-		<gimmick class="gear">
-			<label>Shield</label>
-			<tier class="and-higher">0</tier>
-			<rules>Armour +1, only used with one-handed weapons, allows melee defense against ranged attacks</rules>
-		</gimmick>
-		<gimmick class="powerup">
-			<label>Fighting Nature</label>
-			<tier class="exclusive">0</tier>
-			<rules>+1 on all checks after recovering</rules>
-		</gimmick>
-		<gimmick class="team">
-			<label>Superior Beings</label>
-			<tier class="exclusive">0</tier>
-			<rules>1 free gimmick for every team member, 2 less models on the team</rules>
-		</gimmick>
-		<gimmick class="team">
-			<label>Tournament Spirit</label>
-			<tier class="exclusive">0</tier>
-			<rules>Starts the game with 0 endurance, gains 2 endurance points on the end of every turn</rules>
-		</gimmick>
-		<gimmick class="gear armour">
-			<label>Helmet</label>
-			<tier class="and-higher">0</tier>
-			<rules>Ignore incomming damage once</rules>
+			<rule>ermöglicht Zugang zu einem der Wissensgebiete</rule>
 		</gimmick>
 		<gimmick class="gear magical">
 			<label>Talisman</label>
 			<tier class="and-higher">0</tier>
-			<rules>-1 auf Zauberproben gegen den Charakter</rules>
+			<rule>-1 auf Zauberproben gegen den Charakter</rule>
 		</gimmick>
 		<gimmick class="gear clothing">
 			<label>Tarnumhang</label>
 			<tier class="and-higher">0</tier>
-			<rules>Schleichen und Verstecken +1</rules>
+			<rule>Schleichen und Verstecken +1</rule>
 		</gimmick>
 		<gimmick class="gear weapon melee">
 			<label>Langschwert</label>
 			<tier class="and-higher">1</tier>
-			<rules>Nahkampfprobe +1, Schaden *2</rules>
+			<rule>Nahkampfprobe +1, Schaden *2</rule>
 		</gimmick>
 		<gimmick class="gear weapon melee">
 			<label>Speer</label>
 			<tier class="and-higher">1</tier>
-			<rules>Nahkampfreichweite + 1m, Schaden *2, 2händig, ermöglicht Fernkampfangriffe, Fernkampfprobe -1</rules>
+			<rule>Nahkampfreichweite + 1m, Schaden *2, 2händig, ermöglicht Fernkampfangriffe, Fernkampfprobe -1</rule>
 		</gimmick>
 		<gimmick class="gear weapon melee">
 			<label>Bihänder</label>
 			<tier class="and-higher">1</tier>
-			<rules>Schaden *3, 2händig</rules>
+			<rule>Schaden *3, 2händig</rule>
 		</gimmick>
 		<gimmick class="gear weapon melee">
 			<label>Streitaxt</label>
 			<tier class="and-higher">1</tier>
-			<rules>Schaden +5, 2händig</rules>
+			<rule>Schaden +5, 2händig</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Charme</label>
 			<tier class="exclusive">0</tier>
-			<rules>+1 auf Proben sozialer Interaktion</rules>
+			<rule>+1 auf Proben sozialer Interaktion</rule>
 		</gimmick>
 		<gimmick class="weakness">
 			<label>Angst vor ...</label>
@@ -362,17 +458,17 @@
 			<variant>Feuer</variant>
 			<variant>Dunkelheit</variant>
 			<variant>Abgründen</variant>
-			<rules>-2 auf Proben, die in- oder in unmittelbarer Nähe des Angstobjekts durchgeführt werden</rules>
+			<rule>-2 auf Proben, die in- oder in unmittelbarer Nähe des Angstobjekts durchgeführt werden</rule>
 		</gimmick>
 		<gimmick class="gear weapon ranged">
 			<label>Langbogen</label>
 			<tier class="and-higher">1</tier>
-			<rules>ermöglicht Fernkampfangriffe, Schaden *2, 2händig</rules>
+			<rule>ermöglicht Fernkampfangriffe, Schaden *2, 2händig</rule>
 		</gimmick>
 		<gimmick class="gear weapon ranged">
 			<label>Armbrust</label>
 			<tier class="and-higher">1</tier>
-			<rules>ermöglicht Fernkampfangriffe, Schaden +4, 2händig</rules>
+			<rule>ermöglicht Fernkampfangriffe, Schaden +4, 2händig</rule>
 		</gimmick>
 		<gimmick class="gear economical">
 			<label>Reichtum</label>
@@ -381,162 +477,132 @@
 			<variant>Schmuck</variant>
 			<variant>Check</variant>
 			<variant>Währung</variant>
-			<rules>eröffnet Spieloptionen</rules>
-		</gimmick>
-		<gimmick class="gear armour clothing">
-			<label>Heavy Armour</label>
-			<tier class="and-higher">1</tier>
-			<rules>Armour + 2, may not be used with light armour, movement -1</rules>
-		</gimmick>
-		<gimmick class="powerup melee">
-			<label>Protector</label>
-			<tier class="and-higher">1</tier>
-			<rules>May interfere with any melee attack in range</rules>
-		</gimmick>
-		<gimmick class="powerup melee">
-			<label>Blocker</label>
-			<tier class="and-higher">1</tier>
-			<rules>requires shield, +1 on reactive melee check for 1 endurance</rules>
-		</gimmick>
-		<gimmick class="powerup melee">
-			<label>Berserker</label>
-			<tier class="and-higher">1</tier>
-			<rules>Kann für 1 AP eine Angriffsaktion in der Initiative ohne Einmischungen durchführen, kann sich für den Rest der Runde aber auch nicht mehr verteidigen</rules>
-		</gimmick>
-		<gimmick class="powerup melee">
-			<label>Brutaler Hieb</label>
-			<tier class="and-higher">1</tier>
-			<rules>gibt +2 auf Nahkampfschaden für 1AP</rules>
+			<rule>eröffnet Spieloptionen</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>En Garde!</label>
 			<tier class="and-higher">1</tier>
-			<rules>zieht Aktionsfrei die Waffe / Waffen für 1 AP</rules>
-		</gimmick>
-		<gimmick class="powerup">
-			<label>Entrinnen</label>
-			<tier class="and-higher">1</tier>
-			<rules>Kann für 1 AP seine Bewegungsaktion in der Initiative ohne Einmischungen durchführen.</rules>
+			<rule>zieht Aktionsfrei die Waffe / Waffen für 1 AP</rule>
 		</gimmick>
 		<gimmick class="powerup magical">
 			<label>Fokussieren</label>
 			<tier class="and-higher">1</tier>
-			<rules>+1 auf eine Zauberprobe für 1 AP</rules>
+			<rule>+1 auf eine Zauberprobe für 1 AP</rule>
 		</gimmick>
 		<gimmick class="powerup melee">
 			<label>Vorstoß</label>
 			<tier class="and-higher">1</tier>
-			<rules>+1 auf ein Nahkampfprobe für 1 AP, wenn man jemanden angreift</rules>
+			<rule>+1 auf ein Nahkampfprobe für 1 AP, wenn man jemanden angreift</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Kraftakt</label>
 			<tier class="and-higher">1</tier>
-			<rules>+1 auf eine Stärkeprobe für 1 AP</rules>
+			<rule>+1 auf eine Stärkeprobe für 1 AP</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Stark</label>
 			<tier class="exclusive">0</tier>
-			<rules>+1 auf alle Stärkeproben</rules>
+			<rule>+1 auf alle Stärkeproben</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Robust</label>
 			<tier class="and-higher">0</tier>
-			<rules>+3 natürliche Rüstung</rules>
+			<rule>+3 natürliche Rüstung</rule>
 		</gimmick>
 		<gimmick class="powerup magical">
 			<label>Magieschule(...)</label>
 			<tier class="and-higher">1</tier>
-			<rules>ermöglicht das Wirken von Zaubern einer bestimmten Magieschule (siehe Magie)</rules>
+			<rule>ermöglicht das Wirken von Zaubern einer bestimmten Magieschule (siehe Magie)</rule>
 		</gimmick>
 		<gimmick class="powerup melee">
 			<label>Mehrfachangriff</label>
 			<tier class="and-higher">1</tier>
-			<rules>Nahkampfangriff auf mehrere Ziele für je 1 AP. Als Qualität gilt für alle Ziele die niedrigste Differenz</rules>
+			<rule>Nahkampfangriff auf mehrere Ziele für je 1 AP. Als Qualität gilt für alle Ziele die niedrigste Differenz</rule>
 		</gimmick>
 		<gimmick class="powerup ranged">
 			<label>Schnellschuss</label>
 			<tier class="and-higher">1</tier>
-			<rules>Fernkampfangriff ohne Einmischung für für 1 AP</rules>
+			<rule>Fernkampfangriff ohne Einmischung für für 1 AP</rule>
 		</gimmick>
 		<gimmick class="powerup armour">
 			<label>Rüstträger</label>
 			<tier class="and-higher">1</tier>
-			<rules>kann den Bewegungsmalus schwerer Rüstung ignorieren</rules>
+			<rule>kann den Bewegungsmalus schwerer Rüstung ignorieren</rule>
 		</gimmick>
 		<gimmick class="powerup armour">
 			<label>Gut verpackt</label>
 			<tier class="and-higher">1</tier>
-			<rules>Erhöht die Rüstung pro getragenem Rüstungsteil um 1</rules>
+			<rule>Erhöht die Rüstung pro getragenem Rüstungsteil um 1</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Schmerzfrei</label>
 			<tier class="and-higher">1</tier>
-			<rules>kann Handlung trotz erlittenen Schadens ausführen für 1 AP</rules>
+			<rule>kann Handlung trotz erlittenen Schadens ausführen für 1 AP</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Sprinten</label>
 			<tier class="and-higher">1</tier>
-			<rules>Bewegungsweite *2 für eine Bewegung für 1 AP</rules>
+			<rule>Bewegungsweite *2 für eine Bewegung für 1 AP</rule>
 		</gimmick>
 		<gimmick class="powerup ranged">
 			<label>Schütze</label>
 			<tier class="and-higher">1</tier>
-			<rules>+1 auf eine Fernkampfprobe für 1 AP</rules>
+			<rule>+1 auf eine Fernkampfprobe für 1 AP</rule>
 		</gimmick>
 		<gimmick class="powerup ranged">
 			<label>Meisterschütze</label>
 			<tier class="and-higher">2</tier>
-			<rules>+1 auf Fernkampfproben</rules>
+			<rule>+1 auf Fernkampfproben</rule>
 		</gimmick>
 		<gimmick class="powerup movement">
 			<label>Leichtfüßig</label>
 			<tier class="and-higher">0</tier>
-			<rules>+1 auf Bewegungsproben</rules>
+			<rule>+1 auf Bewegungsproben</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Blitzgeschwind</label>
 			<tier class="and-higher">2</tier>
-			<rules>Kann für 1 AP in einer Runde eine weitere Aktion ausführen</rules>
+			<rule>Kann für 1 AP in einer Runde eine weitere Aktion ausführen</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Handwerker</label>
 			<tier class="and-higher">1</tier>
-			<rules>kann Rüstungen ohne Punktverlust reparieren</rules>
+			<rule>kann Rüstungen ohne Punktverlust reparieren</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Handwerksmeister</label>
 			<tier class="and-higher">2</tier>
-			<rules>kann kann unter Aufwenden von Reichtum Rüstungen mit Rüstungswert + 1 herstellen</rules>
+			<rule>kann kann unter Aufwenden von Reichtum Rüstungen mit Rüstungswert + 1 herstellen</rule>
 		</gimmick>
 		<gimmick class="powerup melee">
 			<label>Strumangriff</label>
 			<tier class="and-higher">1</tier>
-			<rules>Nahkampfangriff mit vorangehenden 4 Metern Bewegung für 1 AP</rules>
+			<rule>Nahkampfangriff mit vorangehenden 4 Metern Bewegung für 1 AP</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Unermüdlich</label>
 			<tier class="and-higher">2</tier>
-			<rules>regeneriert 1 AP sobald die AP durch eine Aktion auf 0 sinken</rules>
+			<rule>regeneriert 1 AP sobald die AP durch eine Aktion auf 0 sinken</rule>
 		</gimmick>
 		<gimmick class="powerup melee">
 			<label>Verteidigen</label>
 			<tier class="and-higher">1</tier>
-			<rules>+1 auf Nahkampfproben, wenn man niemanden Angreift</rules>
+			<rule>+1 auf Nahkampfproben, wenn man niemanden Angreift</rule>
 		</gimmick>
 		<gimmick class="powerup ranged melee">
 			<label>Werfer</label>
 			<tier class="and-higher">1</tier>
-			<rules>ermöglicht Fernkampfangriffe mit Nahkampfwaffen, Fernkampfprobe -2</rules>
+			<rule>ermöglicht Fernkampfangriffe mit Nahkampfwaffen, Fernkampfprobe -2</rule>
 		</gimmick>
 		<gimmick class="powerup melee">
 			<label>Wächter</label>
 			<tier class="and-higher">2</tier>
-			<rules>benötigt Schild, ermöglicht Einmischung durch defensive Aktionen in Angriffe auf andere, auch wenn bereits aktiv gewesen</rules>
+			<rule>benötigt Schild, ermöglicht Einmischung durch defensive Aktionen in Angriffe auf andere, auch wenn bereits aktiv gewesen</rule>
 		</gimmick>
 		<gimmick class="weakness">
 			<label>Grob</label>
 			<tier class="and-higher">0</tier>
-			<rules>-1 auf Proben sozialer Interaktion, Ausnahme Einschüchtern</rules>
+			<rule>-1 auf Proben sozialer Interaktion, Ausnahme Einschüchtern</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Wissen</label>
@@ -546,12 +612,13 @@
 			<variant>Biologie</variant>
 			<variant>Kultur</variant>
 			<variant>Magie</variant>
-			<rules>gibt +1 bei Proben auf ein bestimmtes Wissensgebiet</rules>
+			<rule>gibt +1 bei Proben auf ein bestimmtes Wissensgebiet</rule>
 		</gimmick>
 		<gimmick class="powerup magical">
 			<label>Zaubern(...)</label>
 			<tier class="and-higher">1</tier>
-			<rules>gibt +1 auf Zauberproben einer bestimmten Magieschule</rules>
+			<rule>gibt +1 auf Zauberproben einer bestimmten Magieschule</rule>
 		</gimmick>
+	-->
 	</body>
 </html>
