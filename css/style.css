@@ -97,6 +97,16 @@ variant:after{
 	content: ", ";
 }
 
+cost{
+	display: block;
+	font-style: italic;
+	font-size: 0.76em;
+}
+
+cost::before{
+	content: "Costs: ";
+}
+
 @media( min-width: 500px ){
 	.gimmick-container{
 		column-count: 2;

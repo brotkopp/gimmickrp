@@ -46,17 +46,47 @@ var createGimmickContainer = function( label ){
 	return that;
 };
 
+var GimmicksToJson = function () {
+	var gimmickElements = $("gimmick");
+	var gimmicks = [];
+	for (var i = 0; i < gimmickElements.length; i++) {
+		var el = $(gimmickElements[i]);
+		var gimmick = {};
+		gimmick.label = el.find("label").text();
+		gimmick.tags = el.attr("class").split(" ");
+		var tier = el.find("tier");
+		gimmick.tier = {
+			number: parseInt(tier.text()),
+			andHigher: tier.hasClass("and-higher"),
+			exclusive: tier.hasClass("exclusive")
+		};
+		gimmick.rules = [];
+		var rules = el.find("rule");
+		for (var r = 0; r < rules.length; r++) gimmick.rules.push($(rules[r]).text());
+		
+		gimmick.examples = [];
+		var examples = el.find("example");
+		for (var e = 0; e < examples.length; e++) gimmick.examples.push($(examples[e]).text());
+
+		gimmicks.push(gimmick);
+	}
+
+	return gimmicks;
+}
+
 
 $( "document" ).ready( function(){
-	
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// Remove outdated gimmicks
+
+	$(".outdated").remove();
+
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Creating an array of containers for the tiers
 	
-	var tierList = [  		createGimmickContainer( "Charaktererschaffung" )
-					, createGimmickContainer( "Abenteuerlich" )
-					, createGimmickContainer( "Heroisch" )
-					, createGimmickContainer( "Episch" )
-					, createGimmickContainer( "Legendär" ) ];
+	var tierList = [  		createGimmickContainer("setup")
+					, createGimmickContainer("veteran")
+					, createGimmickContainer("team")];
 	
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Sorting gimmicks from a to z
