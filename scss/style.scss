@@ -1,0 +1,25 @@
+@use 'layout';
+@use 'gimmick';
+@use 'card';
+
+
+.discuss-marker{
+	color: #aa3333;
+}
+
+variant{
+	font-style: italic;
+}
+
+variant + variant:before{
+	content: ", ";
+}
+
+require{
+	display: block;
+	&:before{
+		content: "✔";
+		content: "☑ requires: ";
+		content: "⚠️ requires ";
+	}
+}

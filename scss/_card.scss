@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+card{
+	display: inline-block;
+	padding: 6px 0.5em 0.5em 46px;
+	margin: 0.5em 0;
+	/*width: 20em;*/
+	width: 100%;
+	border: 1px solid;
+	border-radius: 0.5em;
+	box-sizing: border-box;
+	background: linear-gradient( 0deg , rgba( 0 , 0 , 0 , 0.15 ) , rgba( 0 , 0 , 0 , 0.0 ) );
+
+	&:before{
+		margin-left: -40px;
+		margin-bottom: -32px;
+		display: block;
+	}
+
+	label{
+		font-size: 1.5em;
+		display: block;
+	}
+
+	rule{
+		display: block;
+	}
+}
+
+
+
+@media print{
+	card{
+		border-color: #999;
+		border-width: 0.01pt;
+	}
+}

@@ -10,431 +10,427 @@
 		<link rel="stylesheet" type="text/css" charset="utf-8" href="css/style.css" />
 	</head>
 	<body>
-		<!--<gimmick class="outdated team discuss-marker">
-			<label>Racist</label>
-			<tier>0</tier>
-			<rule>Team may not mix races. +1 Damage against other races. (this does not work anymore)</rule>
-		</gimmick>-->
-		<gimmick class="team">
-			<label>Frenzy</label>
-			<tier>2</tier>
-			<rule>The team gains 2 AP for each opponent it brings down or puts out of action.</rule>
+		<gimmick class="shape team-member-count">
+			<label>Big</label>
+			<rule>team member count is increased by 1</rule>
+			<rule>may ignore any incoming hit at the cost of one AP (no credit: the AP must be available at the moment of the hit)</rule>
 		</gimmick>
-		<gimmick class="team">
-			<label>Second Wind</label>
-			<tier>2</tier>
-			<rule>The team gains 2 AP for each member that recovers</rule>
-		</gimmick>
-		<gimmick class="team">
-			<label>Vengeance</label>
-			<tier>2</tier>
-			<rule>The team's AP pool is raised by 1 for each member that is put out of action until the end of the game</rule>
-		</gimmick>
-		<gimmick class="outdated team">
-			<label>Reactive Tactics</label>
-			<tier>2</tier>
-			<rule>The team has a reduced AP pool by -4 and gains 1 AP for each AP another team spends</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Motivated</label>
-			<tier>0</tier>
-			<cost>1</cost>
-			<remark>This gimmick is obsolete, it raises the AP pool by 1 while lowering it by 1 through costs</remark>
-			<rule>The team's AP pool is raised by 1 as long as the model is not put out of action</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Inspiring</label>
-			<tier>1</tier>
-			<cost>1</cost>
-			<rule>The team of this model gains 1 AP each time it succeeds with a melee action.</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Poorly Prepared</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<remark>This gimmick is obsolete, it lowers the AP pool by 1 while raising it by 1 through costs</remark>
-			<rule>The team of this model starts off with 1 less AP.</rule>
-		</gimmick>
-		<gimmick class="weakness">
-			<label>Frail</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<rule>The model is taken out of action right away when hit with a success value of 2 or higher</rule>
-		</gimmick>
-		<gimmick class="powerup">
-			<label>Untiring</label>
-			<tier>1</tier>
-			<cost>1</cost>
-			<rule>This model may act in the first phase of a turn without paying 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated race">
-			<label>Elf</label>
-			<tier>0</tier>
-			<rule>+1 on ranged and movement checks. May not join another models initiative.</rule>
-		</gimmick>
-		<gimmick class="outdated race">
-			<label>Dog</label>
-			<tier>0</tier>
-			<rule>Has a BMR of 8.</rule>
+		<gimmick class="shape team-member-count">
+			<label>Small</label>
+			<rule>team member count is reduced by 0.5</rule>
 			<rule>-1 on melee checks</rule>
+			<rule>any incoming hit is considered to be a heavy hit</rule>
 		</gimmick>
-		<gimmick class="outdated race discuss-marker">
-			<label>Orc</label>
-			<tier>0</tier>
-			<rule>+1 on nondefensive melee checks</rule>
-			<rule>any action besides movement and melee takes 1 AP</rule>
+		<gimmick class="shape">
+			<label>4-legged</label>
+			<variant>dog</variant>
+			<variant>centaur</variant>
+			<rule>BMR is increased by 3</rule>
+			<rule>-1 on ranged- and melee checks</rule>
 		</gimmick>
-		<gimmick class="outdated race discuss-marker">
-			<label>Undead</label>
-			<tier>0</tier>
-			<rule>Immune to Awe and Poison, +1 to armour, may not recover</rule>
+		<gimmick class="trait">
+			<label>Agile</label>
+			<variant>ape</variant>
+			<rule>movement actions are unhindered by obstacles or ground condition</rule>
+			<rule>movement actions cost 2AP</rule>
 		</gimmick>
-		<gimmick class="outdated race discuss-marker">
-			<label>Ogre</label>
-			<tier>0</tier>
-			<rule>-1 on all checks. Ignores hits with a success value below 3. Puts smaller targets out of action on hit.</rule>
+		<gimmick class="trait">
+			<label>Undying</label>
+			<variant>zombie</variant>
+			<rule>does not go out of action</rule>
+			<rule>difficulty for recory is 5</rule>
+			<rule>models gone down count as out of action in respect of the end of battle</rule>
 		</gimmick>
-		<gimmick class="outdated race">
-			<label>Dwarf</label>
-			<tier>0</tier>
-			<rule>-1 to BMR</rule>
-			<rule>+1 on recover checks.</rule>
+		<gimmick class="trait">
+			<label>Redeployable</label>
+			<variant>skeleton</variant>
+			<variant>drone</variant>
+			<rule>is taken out of action on hit</rule>
+			<rule>after being taken out of action may be redeployed by a redeployment host</rule>
 		</gimmick>
-		<gimmick class="team">
-			<label>Law enforcers</label>
-			<tier>2</tier>
-			<rule>May not strike first</rule>
-			<rule>Does not suffer  </rule>
+		<gimmick class="trait team-member-count">
+			<label>Redeployment Host</label>
+			<variant>necromancer</variant>
+			<variant>technomancer</variant>
+			<rule>may redeploy redeployables in melee range by performing a complex action</rule>
+			<rule>team member count is increased by 0.5</rule>
 		</gimmick>
-		<gimmick class="outdated team">
-			<label>Outlaws</label>
-			<tier>2</tier>
-			<rule>May not spend riches. A 1 on the win table recruits a new team member even beyond its maximum size.</rule>
+		<gimmick class="gear armour">
+			<label>God's Armour</label>
+			<rule>difficulty of being hurt is 2</rule>
+			<rule>BMR is increased by 1</rule>
 		</gimmick>
-		<gimmick class="weakness">
-			<label>Dumb</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<rule>May neither perform or react to complex actions</rule>
+		<gimmick class="gear armour">
+			<label>Light Armour</label>
+			<rule>difficulty of being hurt is 4</rule>
+			<rule>BMR is decreased by 1</rule>
 		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Narcistic</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<rule>May not join another models initiative.</rule>
+		<gimmick class="gear armour">
+			<label>Heavy Armour</label>
+			<rule>difficulty of being hurt is 4</rule>
+			<rule>incomming heavy hits are considered to be regular hits</rule>
+			<rule>BMR is decreased by 2</rule>
 		</gimmick>
-		<gimmick class="outdated weakness melee">
-			<label>Feeble</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<rule>-1 to melee checks</rule>
-		</gimmick>
-		<gimmick class="weakness">
-			<label>Blood Lust</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<rule>May not perform defensive melee checks</rule>
-		</gimmick>
-		<gimmick class="outdated weakness karma">
-			<label>Honor</label>
-			<tier>1</tier>
-			<cost>-1</cost>
-			<rule>May not support or be supported in melee attacks. May not shoot running models.</rule>
-		</gimmick>
-		<gimmick class="outdated powerup karma">
-			<label>Awe</label>
-			<tier>1</tier>
-			<cost>1</cost>
-			<rule>May not be attacked by multiple opponents</rule>
-		</gimmick>
-		<gimmick class="outdated powerup karma">
-			<label>Invulnerable</label>
-			<tier>1</tier>
-			<cost>1</cost>
-			<rule>Does not take damage except the success value of the hit is exactly 4.</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Short legs</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<rule>-1 on movement checks</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Sloth</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<rule>-1 on initiative checks</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Crippled</label>
-			<tier>1</tier>
-			<cost>-1</cost>
-			<rule>-1 on movement checks</rule>
-		</gimmick>
-		<gimmick class="outdated weakness karma">
-			<label>Usual suspect</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<rule>Law enforcers +1 on checks attacking this model</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Wimpy</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<rule>-1 on all checks after recovering</rule>
-		</gimmick>
-		<gimmick class="weakness">
-			<label>Hesitant</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<rule>May not act in phase 1</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Field Medic</label>
-			<tier>0</tier>
-			<cost>1</cost>
-			<rule>May for 1 AP recover another model without doing a check or being hindered.</rule>
-		</gimmick>
-		<gimmick class="outdated powerup melee">
-			<label>Assassin</label>
-			<tier>1</tier>
-			<cost>1</cost>
-			<rule>Delays entry of battle field. As the acting model may enter the battle field by attacking any model on the field either ranged or melee.</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Courage</label>
-			<tier>0</tier>
-			<cost>1</cost>
-			<rule>+1 on interfering initiative checks</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Leadership</label>
-			<tier>0</tier>
-			<cost>1</cost>
-			<rule>+1 on leadership checks</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Unpopular</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<rule>-1 on leadership checks</rule>
-		</gimmick>
-		<gimmick class="outdated powerup melee">
-			<label>Faint</label>
-			<tier>1</tier>
-			<cost>1</cost>
-			<rule>May redirect its action or reaction after all has been determined for 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated powerup discuss-marker">
-			<label>Willpower</label>
-			<tier>0</tier>
-			<cost>1</cost>
-			<rule>1 extra use for a 1 use gimmick</rule>
-		</gimmick>
-		<gimmick class="outdated powerup karma">
-			<label>Harmless</label>
-			<tier>0</tier>
-			<cost>1</cost>
-			<rule>May not be attacked until it attacks itself</rule>
-		</gimmick>
-		<gimmick class="outdated powerup movement">
-			<label>Acrobat</label>
-			<tier>1</tier>
-			<cost>1</cost>
+		<gimmick class="gear melee">
+			<label>Toothless</label>
+			<variant>unarmed</variant>
+			<rule>-1 on melee checks</rule>
 			<rule>+1 on movement checks</rule>
 		</gimmick>
-		<gimmick class="outdated gear weapon ranged">
-			<label>Ranged Weapon</label>
-			<tier>0</tier>
-			<variant>bow</variant>
-			<variant>rifle</variant>
-			<rule>enables ranged attacks</rule>
+		<gimmick class="gear weapon melee">
+			<label>Superior Melee Weapon</label>
+			<variant>spear</variant>
+			<variant>long sword</variant>
+			<variant>staff</variant>
+			<rule>+1 on melee checks</rule>
+			<rule>-1 on movement checks</rule>
 		</gimmick>
-		<gimmick class="outdated gear weapon ranged">
+		<gimmick class="gear weapon melee">
+			<label>Heavy Melee Weapon</label>
+			<variant>two handed melee weapon</variant>
+			<rule>hits are heavy</rule>
+			<rule>attack actions cost +1 AP</rule>
+		</gimmick>
+		<gimmick class="gear">
+			<label>Shield</label>
+			<rule>+1 on melee checks that do not inflict damage</rule>
+			<rule>-1 on movement checks</rule>
+		</gimmick>
+		<gimmick class="gear weapon ranged">
 			<label>Light Ranged Weapon</label>
-			<tier>0</tier>
 			<variant>sling</variant>
 			<variant>pistol</variant>
 			<rule>enables ranged attacks</rule>
 			<rule>- 1 on ranged checks</rule>
 		</gimmick>
-		<gimmick class="outdated gear weapon ranged">
-			<label>Area Damage</label>
-			<tier>0</tier>
-			<variant>machine gun</variant>
-			<variant>flame thrower</variant>
-			<variant>rocket launcher</variant>
-			<variant>granade</variant>
-			<rule>enables ranged attacks, -1 on ranged checks, delivers regular damage to up to success value targets in a radius of 3</rule>
-		</gimmick>
-		<gimmick class="outdated powerup discuss-marker">
-			<label>Poison</label>
-			<tier>1</tier>
-			<cost>1</cost>
-			<rule>The first target hit dies at the end of the battle</rule>
+		<gimmick class="gear weapon ranged">
+			<label>Regular Ranged Weapon</label>
+			<variant>bow</variant>
+			<variant>rifle</variant>
+			<rule>enables ranged attacks</rule>
+			<rule>-1 on movement checks</rule>
 		</gimmick>
 		<gimmick class="gear weapon ranged">
-			<label>Armour Piercing Ranged Weapon</label>
-			<tier>0</tier>
-			<cost>1</cost>
-			<variant>crossbow</variant>
-			<variant>sniper rifle</variant>
+			<label>Heavy Ranged Weapon</label>
+			<variant>machine gun</variant>
+			<variant>cross bow</variant>
 			<rule>enables ranged attacks</rule>
-			<rule>target gets -1 on armour checks</rule>
+			<rule>hits are heavy</rule>
+			<rule>attack actions cost +1 AP</rule>
+			<rule>BMR is reduced by 1</rule>
+			<rule>-1 on movement checks</rule>
 		</gimmick>
-		<gimmick class="outdated weakness weapon melee">
-			<label>No Melee Weapon</label>
-			<tier>0</tier>
-			<cost>-1</cost>
-			<rule>-1 on melee checks</rule>
-			<rule>+1 on movement checks</rule>
+		<gimmick class="gear weapon ranged">
+			<label>Indirect Attacks</label>
+			<variant>flame thrower</variant>
+			<variant>alien homing projectile bio glove</variant>
+			<require>ranged weapon</require>
+			<rule>range is limited to 8 inch</rule>
+			<rule>difficulty for cover and prone is not applied</rule>
+		</gimmick>
+		<gimmick class="gear weapon ranged">
+			<label>Area Damage</label>
+			<variant>flame thrower</variant>
+			<variant>granade</variant>
+			<variant>machine gun</variant>
+			<require>ranged weapon</require>
+			<rule>hits all targets in melee range of the targeted model</rule>
+			<rule>-1 on ranged checks</rule>
+		</gimmick>
+		<gimmick class="powerup">
+			<label>Inspiring</label>
+			<rule>after performing a succesful action lets another team member perform that same kind of action without cost of AP</rule>
+		</gimmick>
+		<gimmick class="powerup ranged">
+			<label>Marksman</label>
+			<rule>+1 on ranged checks</rule>
+		</gimmick>
+		<gimmick class="powerup melee">
+			<label>Martial Artist</label>
+			<rule>+1 on melee checks</rule>
+		</gimmick>
+		<gimmick class="powerup melee">
+			<label>Fighting in the Shade</label>
+			<require>shield</require>
+			<rule>may react to being shot at with melee defense</rule>
 		</gimmick>
 		<gimmick class="powerup ranged">
 			<label>Pistolero</label>
-			<tier>1</tier>
-			<cost>1</cost>
-			<rule>May perform a ranged attack as reaction on any action in sight for 2 AP</rule>
-		</gimmick>
-		<gimmick class="gear weapon melee">
-			<label>Heavy Melee Weapon</label>
-			<tier>0</tier>
-			<variant>axe</variant>
-			<variant>hammer</variant>
-			<rule>When it hits, the success value is increased by 1.</rule>
-			<rule>-1 on melee checks</rule>
-		</gimmick>
-		<gimmick class="outdated gear weapon melee">
-			<label>Superior Melee Weapon</label>
-			<tier>0</tier>
-			<variant>long sword</variant>
-			<variant>spear</variant>
-			<rule>+1 on melee checks</rule>
-			<rule>- 0.5 on team members total (rounded down)</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Cold blooded</label>
-			<tier>1</tier>
-			<cost>1</cost>
-			<rule>+1 on attacks that are unhindered</rule>
-		</gimmick>
-		<gimmick class="outdated gear">
-			<label>Shield</label>
-			<tier>0</tier>
-			<cost>0</cost>
-			<rule>May spend 2 AP to ignore a melee hit that would put the model down.</rule>
-			<rule>Allows melee defense as reaction to ranged attacks.</rule>
-			<rule>-1 on movement checks</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Fighting Nature</label>
-			<tier>0</tier>
-			<cost>1</cost>
-			<rule>+1 on all checks after recovering</rule>
-		</gimmick>
-		<gimmick class="gear armour">
-			<label>Helmet</label>
-			<tier>0</tier>
-			<cost>0</cost>
-			<rule>May spend 2 AP to ignore a hit that would put the model out of action.</rule>
-		</gimmick>
-		<gimmick class="gear armour clothing">
-			<label>Heavy Armour</label>
-			<tier>0</tier>
-			<cost>1</cost>
-			<rule>May do an armour check +1 that interferes with damaging checks.</rule>
-			<rule>Suffers -1 on movement checks</rule>
-			<rule>Suffers -1 on BMR</rule>
-		</gimmick>
-		<gimmick class="gear armour clothing">
-			<label>Light Armour</label>
-			<tier>0</tier>
-			<cost>1</cost>
-			<rule>May do an armour check that interferes with damaging checks.</rule>
-			<rule>Suffers -1 on movement checks</rule>
+			<rule>may react to being shot at by shooting back</rule>
 		</gimmick>
 		<gimmick class="outdated powerup melee discuss-marker">
 			<label>Protector</label>
-			<tier>1</tier>
-			<cost>1</cost>
 			<rule>May move up to 6 inches in order to protect another model in melee</rule>
 		</gimmick>
-		<gimmick class="outdated powerup melee">
+		<gimmick class="powerup melee">
 			<label>Guardian</label>
-			<tier>0</tier>
+			<rule>may react on any opposing melee attack in its melee range by counter attack or defending the target</rule>
+		</gimmick>
+		<gimmick class="powerup">
+			<label>Fighting Nature</label>
+			<rule>gain the success value of a recovery check as APs</rule>
+		</gimmick>
+		<gimmick class="powerup">
+			<label>Tough</label>
+			<rule>+1 on recovery checks</rule>
+		</gimmick>
+		<gimmick class="powerup">
+			<label>Athlete</label>
+			<rule>+1 on movment checks</rule>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Frail</label>
+			<!--<rule>the model is taken out of action right away when hit with a success value of 2 or higher</rule>-->
+			<rule>the model's difficulty of getting hurt is reduced by 1</rule>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Crippled</label>
+			<rule>the model's BMR is reduced by 1</rule>
+			<rule>-1 on movement checks</rule>
+		</gimmick>
+		<gimmick class="powerup">
+			<label>Untiring</label>
+			<rule>this models first action of a turn cost no AP</rule>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Wimpy</label>
+			<rule>-1 on recovery checks</rule>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Hesitant</label>
+			<rule>the models 1st action in a turn costs +1 AP</rule>
+		</gimmick>
+		<gimmick class="team">
+			<label>Frenzy</label>
+			<rule>the team gains 2 AP for each opponent it brings down or puts out of action</rule>
+		</gimmick>
+		<gimmick class="team">
+			<label>Concrete Soccer</label>
+			<rule>-1 on initative checks</rule>
+			<rule>+1 on defensive melee checks</rule>
+		</gimmick>
+		<gimmick class="team">
+			<label>Second Wind</label>
+			<rule>the team gains 2 AP for each member that recovers</rule>
+		</gimmick>
+		<gimmick class="team">
+			<label>Vengeance</label>
+			<rule>+1 on initiative checks for each member that is put out of action until the end of battle</rule>
+		</gimmick>
+		<gimmick class="outdated team">
+			<label>Reactive Tactics</label>
+			<rule>The team has a reduced AP pool by -4 and gains 1 AP for each AP another team spends</rule>
+		</gimmick>
+		<gimmick class="outdated body">
+			<label>Elf</label>
+			<rule>+1 on ranged and movement checks. May not join another models initiative.</rule>
+		</gimmick>
+		<gimmick class="outdated body">
+			<label>Dog</label>
+			<rule>Has a BMR of 8.</rule>
+			<rule>-1 on melee checks</rule>
+		</gimmick>
+		<gimmick class="outdated body discuss-marker">
+			<label>Orc</label>
+			<rule>+1 on nondefensive melee checks</rule>
+			<rule>any action besides movement and melee takes 1 AP</rule>
+		</gimmick>
+		<gimmick class="outdated body discuss-marker">
+			<label>Ogre</label>
+			<rule>-1 on all checks. Ignores hits with a success value below 3. Puts smaller targets out of action on hit.</rule>
+		</gimmick>
+		<gimmick class="outdated body">
+			<label>Dwarf</label>
+			<rule>-1 to BMR</rule>
+			<rule>+1 on recover checks.</rule>
+		</gimmick>
+		<gimmick class="outdated team">
+			<label>Law enforcers</label>
+			<rule>May not strike first</rule>
+			<rule>Does not suffer  </rule>
+		</gimmick>
+		<gimmick class="outdated team">
+			<label>Outlaws</label>
+			<rule>May not spend riches. A 1 on the win table recruits a new team member even beyond its maximum size.</rule>
+		</gimmick>
+		<gimmick class="outdated weakness">
+			<label>Dumb</label>
+			<cost>-1</cost>
+			<rule>May neither perform or react to complex actions</rule>
+		</gimmick>
+		<gimmick class="outdated weakness">
+			<label>Narcistic</label>
+			<cost>-1</cost>
+			<rule>May not join another models initiative.</rule>
+		</gimmick>
+		<gimmick class="outdated weakness melee">
+			<label>Feeble</label>
+			<cost>-1</cost>
+			<rule>-1 to melee checks</rule>
+		</gimmick>
+		<gimmick class="outdated weakness">
+			<label>Blood Lust</label>
+			<cost>-1</cost>
+			<rule>May not perform defensive melee checks</rule>
+		</gimmick>
+		<gimmick class="outdated weakness karma">
+			<label>Honor</label>
+			<cost>-1</cost>
+			<rule>May not support or be supported in melee attacks. May not shoot running models.</rule>
+		</gimmick>
+		<gimmick class="outdated powerup karma">
+			<label>Awe</label>
 			<cost>1</cost>
-			<rule>May react on any opposing melee attack in its melee range by counter attack or defending the target.</rule>
+			<rule>May not be attacked by multiple opponents</rule>
+		</gimmick>
+		<gimmick class="outdated powerup karma">
+			<label>Invulnerable</label>
+			<cost>1</cost>
+			<rule>Does not take damage except the success value of the hit is exactly 4.</rule>
+		</gimmick>
+		<gimmick class="outdated weakness">
+			<label>Short legs</label>
+			<cost>-1</cost>
+			<rule>-1 on movement checks</rule>
+		</gimmick>
+		<gimmick class="outdated weakness">
+			<label>Sloth</label>
+			<cost>-1</cost>
+			<rule>-1 on initiative checks</rule>
+		</gimmick>
+		<gimmick class="outdated weakness">
+			<label>Crippled</label>
+			<cost>-1</cost>
+			<rule>-1 on movement checks</rule>
+		</gimmick>
+		<gimmick class="outdated weakness karma">
+			<label>Usual suspect</label>
+			<cost>-1</cost>
+			<rule>Law enforcers +1 on checks attacking this model</rule>
+		</gimmick>
+		<gimmick class="outdated powerup">
+			<label>Field Medic</label>
+			<cost>1</cost>
+			<rule>May for 1 AP recover another model without doing a check or being hindered.</rule>
 		</gimmick>
 		<gimmick class="outdated powerup melee">
-			<label>Blocker</label>
-			<tier>1</tier>
+			<label>Assassin</label>
 			<cost>1</cost>
-			<rule>requires shield, +1 on reactive melee checks</rule>
+			<rule>Delays entry of battle field. As the acting model may enter the battle field by attacking any model on the field either ranged or melee.</rule>
+		</gimmick>
+		<gimmick class="outdated powerup">
+			<label>Courage</label>
+			<cost>1</cost>
+			<rule>+1 on interfering initiative checks</rule>
+		</gimmick>
+		<gimmick class="outdated powerup">
+			<label>Leadership</label>
+			<cost>1</cost>
+			<rule>+1 on leadership checks</rule>
+		</gimmick>
+		<gimmick class="outdated weakness">
+			<label>Unpopular</label>
+			<cost>-1</cost>
+			<rule>-1 on leadership checks</rule>
+		</gimmick>
+		<gimmick class="outdated powerup melee">
+			<label>Faint</label>
+			<cost>1</cost>
+			<rule>May redirect its action or reaction after all has been determined for 1 AP</rule>
+		</gimmick>
+		<gimmick class="outdated powerup discuss-marker">
+			<label>Willpower</label>
+			<cost>1</cost>
+			<rule>1 extra use for a 1 use gimmick</rule>
+		</gimmick>
+		<gimmick class="outdated powerup karma">
+			<label>Harmless</label>
+			<cost>1</cost>
+			<rule>May not be attacked until it attacks itself</rule>
+		</gimmick>
+		<gimmick class="outdated powerup movement">
+			<label>Acrobat</label>
+			<cost>1</cost>
+			<rule>+1 on movement checks</rule>
+		</gimmick>
+		<gimmick class="outdated powerup discuss-marker">
+			<label>Poison</label>
+			<cost>1</cost>
+			<rule>The first target hit dies at the end of the battle</rule>
+		</gimmick>
+		<gimmick class="outdated powerup">
+			<label>Cold blooded</label>
+			<cost>1</cost>
+			<rule>+1 on attacks that are unhindered</rule>
+		</gimmick>
+		<gimmick class="outdated powerup">
+			<label>Fighting Nature</label>
+			<cost>1</cost>
+			<rule>+1 on all checks after recovering</rule>
+		</gimmick>
+		<gimmick class="outdated gear armour">
+			<label>Helmet</label>
+			<cost>0</cost>
+			<rule>May spend 2 AP to ignore a hit that would put the model out of action.</rule>
 		</gimmick>
 		<gimmick class="outdated powerup melee">
 			<label>Berserk</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>May perform a melee attack between turns for 1 AP without being interfered or supported. May not interfere with any action in the following turn.</rule>
 		</gimmick>
 		<gimmick class="outdated powerup movement">
 			<label>Fleet of Foot</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>May perform a movement action between turns for 1 AP without being reacted to or joined.</rule>
 		</gimmick>
 		<gimmick class="outdated powerup movement">
 			<label>Evasive</label>
-			<tier>0</tier>
 			<cost>1</cost>
 			<rule>My react to being shot at by performing a movement action as interfering check.</rule>
 		</gimmick>
 		<gimmick class="outdated powerup melee">
 			<label>Savage Blow</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>Making the next melee hit fatal for 1 AP</rule>
 		</gimmick>
+		<card class="tactical">
+			<label>Sneak Attack</label>
+			<rule>may redeploy any model that is not gone out of action and not in sight of the enemy anywhere on the battlefield on the beginning of the turn</rule>
+		</card>
 		
 		<!--
 		<gimmick class="outdated powerup melee">
 			<label>Riposte</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>+1 auf aggressive Nahkampfproben gegen angreifende Gegner ohne Riposte, verleiht Riposte</rule>
 		</gimmick>
 		<gimmick class="outdated weakness">
 			<label>Blutarm</label>
-			<tier>0</tier>
 			<cost>-1</cost>
 			<rule>-2 auf AP</rule>
 		</gimmick>
 		<gimmick class="outdated weakness">
 			<label>Schwache Schultern</label>
-			<tier>0</tier>
 			<cost>-1</cost>
 			<rule>erhält in Rüstung -1 auf alle Proben</rule>
 		</gimmick>
 		<gimmick class="outdated weakness">
 			<label>Kränklich</label>
-			<tier>0</tier>
 			<cost>-1</cost>
 			<rule>regeneriert AP nur in einem ordentlichen Bett mit genug Zeit</rule>
 		</gimmick>
 		<gimmick class="outdated weakness">
 			<label>Empfindlich</label>
-			<tier>0</tier>
 			<cost>-1</cost>
 			<rule>erlittener Schaden ist um 1 erhöht</rule>
 		</gimmick>
 		<gimmick class="outdated weakness">
 			<label>Arm</label>
-			<tier>0</tier>
 			<cost>-1</cost>
 			<rule>muss für Unterbringung und Verpflegung Reichtum aufbringen, ist sonst auf Almosen angewiesen</rule>
 		</gimmick>
 		<gimmick class="outdated gear">
 			<label>Spezialausrüstung</label>
-			<tier>1</tier>
 			<variant>Minenarbeiterwerkzeug</variant>
 			<variant>Bergsteigerausrüstung</variant>
 			<variant>Reiselabor</variant>
@@ -442,47 +438,39 @@
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Aufmerksam</label>
-			<tier>0</tier>
 			<cost>1</cost>
 			<rule>+1 auf Wahrnehmungsproben</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Vital</label>
-			<tier>0</tier>
 			<cost>1</cost>
 			<rule>+2 auf AP</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Mutig</label>
-			<tier>0</tier>
 			<cost>1</cost>
 			<rule>Darf die Effekte von Furcht und Panik ignorieren für 1 AP</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Überraschung</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>Erhält in der ersten Kampfrunde +1 pro investiertem AP auf Initiativeproben</rule>
 		</gimmick><gimmick class="outdated gear">
 			<label>Foliant der Magie</label>
-			<tier>0</tier>
 			<rule>ermöglicht Zugang zu einer der Magieschulen</rule>
 		</gimmick>
 		<gimmick class="outdated weakness karma">
 			<label>Opfer</label>
-			<tier>0</tier>
 			<cost>-1</cost>
 			<rule>Kriminelle bestehlen oder überfallen sie / ihn immer als ersten</rule>
 		</gimmick>
 		<gimmick class="outdated powerup karma">
 			<label>Autorität</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>Bei Verhandlungen mit mehreren Gegnern, können höchstens 2 in Konkurrenz treten</rule>
 		</gimmick>
 		<gimmick class="outdated gear">
 			<label>Insignie der Herrschaft</label>
-			<tier>1</tier>
 			<variant>Zepter</variant>
 			<variant>Banner</variant>
 			<variant>Wappenrock</variant>
@@ -490,90 +478,74 @@
 		</gimmick>
 		<gimmick class="outdated weakness karma">
 			<label>Grausam</label>
-			<tier>1</tier>
 			<cost>-1</cost>
 			<rule>Wenn darum gebeten, darf sie / er keine Gnade gewähren</rule>
 		</gimmick>
 		<gimmick class="outdated weakness karma">
 			<label>Treulos</label>
-			<tier>1</tier>
 			<cost>-1</cost>
 			<rule>Verlässt das Kampfgeschehen, sobald mindestens einem Gefährten die AP auf 0 sinken</rule>
 		</gimmick>
 		<gimmick class="outdated weakness karma">
 			<label>Heimsuchung</label>
-			<tier>1</tier>
 			<cost>-1</cost>
 			<rule>Gegner erhalten im Kampf Unterstützung durch eine Einbildung des Charakters, welche ihrerseits immer einen Würfel mit in die Konkurrenz wirft</rule>
 		</gimmick>
 		<gimmick class="outdated weakness karma">
 			<label>Gezeichnet</label>
-			<tier>1</tier>
 			<cost>-1</cost>
 			<rule>Andere verweigern die Kommunikation, sofern sie nicht einiges zusammen durchgemacht haben</rule>
 		</gimmick>
 		<gimmick class="outdated weakness">
 			<label>Schlachtwahn</label>
-			<tier>1</tier>
 			<cost>-1</cost>
 			<rule>Er / sie kann einen Kampf erst beenden, wenn er / sie 0 AP hat</rule>
 		</gimmick>
 		<gimmick class="outdated powerup karma">
 			<label>Schutz der Geister</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>Gegner treten mit den Geistern in Konkurrenz (1 Wurf, unmodifiziert), sobald sie den Charakter angreifen</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Universalgelehrter</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>+ 1 auf alle Wissensproben</rule>
 		</gimmick>
 		<gimmick class="outdated gear">
 			<label>Foliant des Wissens</label>
-			<tier>0</tier>
 			<rule>ermöglicht Zugang zu einem der Wissensgebiete</rule>
 		</gimmick>
 		<gimmick class="outdated gear magical">
 			<label>Talisman</label>
-			<tier>0</tier>
 			<rule>-1 auf Zauberproben gegen den Charakter</rule>
 		</gimmick>
 		<gimmick class="outdated gear clothing">
 			<label>Tarnumhang</label>
-			<tier>0</tier>
 			<rule>Schleichen und Verstecken +1</rule>
 		</gimmick>
 		<gimmick class="outdated gear weapon melee">
 			<label>Langschwert</label>
-			<tier>1</tier>
 			<rule>Nahkampfprobe +1, Schaden *2</rule>
 		</gimmick>
 		<gimmick class="outdated gear weapon melee">
 			<label>Speer</label>
-			<tier>1</tier>
 			<rule>Nahkampfreichweite + 1m, Schaden *2, 2händig, ermöglicht Fernkampfangriffe, Fernkampfprobe -1</rule>
 		</gimmick>
 		<gimmick class="outdated gear weapon melee">
 			<label>Bihänder</label>
-			<tier>1</tier>
 			<rule>Schaden *3, 2händig</rule>
 		</gimmick>
 		<gimmick class="outdated gear weapon melee">
 			<label>Streitaxt</label>
-			<tier>1</tier>
 			<rule>Schaden +5, 2händig</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Charme</label>
-			<tier>0</tier>
 			<cost>1</cost>
 			<rule>+1 auf Proben sozialer Interaktion</rule>
 		</gimmick>
 		<gimmick class="outdated weakness">
 			<label>Angst vor ...</label>
-			<tier>1</tier>
 			<cost>-1</cost>
 			<variant>Wasser</variant>
 			<variant>Feuer</variant>
@@ -583,17 +555,14 @@
 		</gimmick>
 		<gimmick class="outdated gear weapon ranged">
 			<label>Langbogen</label>
-			<tier>1</tier>
 			<rule>ermöglicht Fernkampfangriffe, Schaden *2, 2händig</rule>
 		</gimmick>
 		<gimmick class="outdated gear weapon ranged">
 			<label>Armbrust</label>
-			<tier>1</tier>
 			<rule>ermöglicht Fernkampfangriffe, Schaden +4, 2händig</rule>
 		</gimmick>
 		<gimmick class="outdated gear economical">
 			<label>Reichtum</label>
-			<tier>1</tier>
 			<variant>Edelsteine</variant>
 			<variant>Schmuck</variant>
 			<variant>Check</variant>
@@ -602,157 +571,131 @@
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>En Garde!</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>zieht Aktionsfrei die Waffe / Waffen für 1 AP</rule>
 		</gimmick>
 		<gimmick class="outdated powerup magical">
 			<label>Fokussieren</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>+1 auf eine Zauberprobe für 1 AP</rule>
 		</gimmick>
 		<gimmick class="outdated powerup melee">
 			<label>Vorstoß</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>+1 auf ein Nahkampfprobe für 1 AP, wenn man jemanden angreift</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Kraftakt</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>+1 auf eine Stärkeprobe für 1 AP</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Stark</label>
-			<tier>0</tier>
 			<cost>1</cost>
 			<rule>+1 auf alle Stärkeproben</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Robust</label>
-			<tier>0</tier>
 			<cost>1</cost>
 			<rule>+3 natürliche Rüstung</rule>
 		</gimmick>
 		<gimmick class="outdated powerup magical">
 			<label>Magieschule(...)</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>ermöglicht das Wirken von Zaubern einer bestimmten Magieschule (siehe Magie)</rule>
 		</gimmick>
 		<gimmick class="outdated powerup melee">
 			<label>Mehrfachangriff</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>Nahkampfangriff auf mehrere Ziele für je 1 AP. Als Qualität gilt für alle Ziele die niedrigste Differenz</rule>
 		</gimmick>
 		<gimmick class="outdated powerup ranged">
 			<label>Schnellschuss</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>Fernkampfangriff ohne Einmischung für für 1 AP</rule>
 		</gimmick>
 		<gimmick class="outdated powerup armour">
 			<label>Rüstträger</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>kann den Bewegungsmalus schwerer Rüstung ignorieren</rule>
 		</gimmick>
 		<gimmick class="outdated powerup armour">
 			<label>Gut verpackt</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>Erhöht die Rüstung pro getragenem Rüstungsteil um 1</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Schmerzfrei</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>kann Handlung trotz erlittenen Schadens ausführen für 1 AP</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Sprinten</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>Bewegungsweite *2 für eine Bewegung für 1 AP</rule>
 		</gimmick>
 		<gimmick class="outdated powerup ranged">
 			<label>Schütze</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>+1 auf eine Fernkampfprobe für 1 AP</rule>
 		</gimmick>
 		<gimmick class="outdated powerup ranged">
 			<label>Meisterschütze</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>+1 auf Fernkampfproben</rule>
 		</gimmick>
 		<gimmick class="outdated powerup movement">
 			<label>Leichtfüßig</label>
-			<tier>0</tier>
 			<cost>1</cost>
 			<rule>+1 auf Bewegungsproben</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Blitzgeschwind</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>Kann für 1 AP in einer Runde eine weitere Aktion ausführen</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Handwerker</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>kann Rüstungen ohne Punktverlust reparieren</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Handwerksmeister</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>kann kann unter Aufwenden von Reichtum Rüstungen mit Rüstungswert + 1 herstellen</rule>
 		</gimmick>
 		<gimmick class="outdated powerup melee">
 			<label>Strumangriff</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>Nahkampfangriff mit vorangehenden 4 Metern Bewegung für 1 AP</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Unermüdlich</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>regeneriert 1 AP sobald die AP durch eine Aktion auf 0 sinken</rule>
 		</gimmick>
 		<gimmick class="outdated powerup melee">
 			<label>Verteidigen</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>+1 auf Nahkampfproben, wenn man niemanden Angreift</rule>
 		</gimmick>
 		<gimmick class="outdated powerup ranged melee">
 			<label>Werfer</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>ermöglicht Fernkampfangriffe mit Nahkampfwaffen, Fernkampfprobe -2</rule>
 		</gimmick>
 		<gimmick class="outdated powerup melee">
 			<label>Wächter</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>benötigt Schild, ermöglicht Einmischung durch defensive Aktionen in Angriffe auf andere, auch wenn bereits aktiv gewesen</rule>
 		</gimmick>
 		<gimmick class="outdated weakness">
 			<label>Grob</label>
-			<tier>0</tier>
 			<cost>-1</cost>
 			<rule>-1 auf Proben sozialer Interaktion, Ausnahme Einschüchtern</rule>
 		</gimmick>
 		<gimmick class="outdated powerup">
 			<label>Wissen</label>
-			<tier>0</tier>
 			<cost>1</cost>
 			<variant>Geschichte</variant>
 			<variant>Geographie</variant>
@@ -763,7 +706,6 @@
 		</gimmick>
 		<gimmick class="outdated powerup magical">
 			<label>Zaubern(...)</label>
-			<tier>1</tier>
 			<cost>1</cost>
 			<rule>gibt +1 auf Zauberproben einer bestimmten Magieschule</rule>
 		</gimmick>

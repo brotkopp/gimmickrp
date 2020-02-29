@@ -15,9 +15,9 @@ var createGimmickContainer = function( label ){
 	var updateStatistics = function(){
 		var output = "";
 		var statistics = {};
-		var content = $( container ).find( "gimmick" );
+		var content = $( container ).children();
 		
-		output += content.length + " gimmicks";
+		output += content.length + " total";
 
 		// cycling through container content
 		for( var i = 0 ; i < content.length ; i++ ){
@@ -83,15 +83,43 @@ $( "document" ).ready( function(){
 
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Creating an array of containers for the tiers
-	
-	var tierList = [  		createGimmickContainer("setup")
-					, createGimmickContainer("veteran")
-					, createGimmickContainer("team")];
+
+	var sections = [
+		{
+			fit: function (item) {
+				return item.tagName == "GIMMICK" &&
+					(item.classList.contains("shape") ||
+					item.classList.contains("gear") ||
+					item.classList.contains("trait"));
+			},
+			container: createGimmickContainer("Team Setup")
+		},
+		{
+			fit: function (item) {
+				return item.tagName == "GIMMICK" &&
+					(item.classList.contains("powerup") ||
+					item.classList.contains("weakness"));
+			},
+			container: createGimmickContainer("Veteran")
+		},
+		{
+			fit: function (item) {
+				return item.tagName == "GIMMICK" && item.classList.contains("team");
+			},
+			container: createGimmickContainer("Team Policy")
+		},
+		{
+			fit: function (item) {
+				return item.tagName == "CARD" && item.classList.contains("tactical");
+			},
+			container: createGimmickContainer("Tactical Cards")
+		}
+	]
 	
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Sorting gimmicks from a to z
 	
-	$( "gimmick" ).sort( function( a , b ){
+	$( "body > *" ).sort( function( a , b ){
 
 		var replaceCharacters = [
 								{ character: "Ä" , replacement: "A"}
@@ -121,7 +149,12 @@ $( "document" ).ready( function(){
 	// Appending each gimmick to the according tier container
 	
 	.each( function( idx , itm ){
-		tierList[ $( itm ).find( "tier" ).text() ].append( itm );
+		for (var s in sections) {
+			if (sections[s].fit(itm)){
+				sections[s].container.append(itm);
+				break;
+			}
+		}
 	});
 
 });

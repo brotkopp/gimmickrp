@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+html{
+	font-family: Arial;
+	color: #666;
+	background-color: rgba(255,255,255,0.0);
+}
+
+.gimmick-container{
+	column-count: 1;
+}
+
+
+@media( min-width: 500px ){
+	.gimmick-container{
+		column-count: 2;
+	}
+}
+
+@media( min-width: 900px ){
+	.gimmick-container{
+		column-count: 3;
+	}
+}
+
+@media( min-width: 1300px ){
+	.gimmick-container{
+		column-count: 4;
+	}
+}
+
+@media( min-width: 1700px ){
+	.gimmick-container{
+		column-count: 5;
+	}
+}
+
+@media( min-width: 2100px ){
+	.gimmick-container{
+		column-count: 6;
+	}
+}
+
+@media print{
+	html{
+		color: #000;
+		zoom: 0.7; 
+		-moz-transform: scale(0.7); 
+		-moz-transform-origin: 0 0;
+	}
+
+	.gimmick-container{
+		column-count: 3;
+		/*font-size: 0.85em;*/
+	}
+}

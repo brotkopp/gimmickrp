@@ -1,158 +1,160 @@
-@charset "utf-8";
-
-html{
-	font-family: Arial;
-	color: #666;
-	background-color: rgba(255,255,255,0.0);
+@charset "UTF-8";
+html {
+  font-family: Arial;
+  color: #666;
+  background-color: rgba(255, 255, 255, 0);
 }
 
-.gimmick-container{
-	column-count: 1;
+.gimmick-container {
+  column-count: 1;
 }
 
-label, rules, tier{
-	display: block;
+@media (min-width: 500px) {
+  .gimmick-container {
+    column-count: 2;
+  }
+}
+@media (min-width: 900px) {
+  .gimmick-container {
+    column-count: 3;
+  }
+}
+@media (min-width: 1300px) {
+  .gimmick-container {
+    column-count: 4;
+  }
+}
+@media (min-width: 1700px) {
+  .gimmick-container {
+    column-count: 5;
+  }
+}
+@media (min-width: 2100px) {
+  .gimmick-container {
+    column-count: 6;
+  }
+}
+@media print {
+  html {
+    color: #000;
+    zoom: 0.7;
+    -moz-transform: scale(0.7);
+    -moz-transform-origin: 0 0;
+  }
+
+  .gimmick-container {
+    column-count: 3;
+    /*font-size: 0.85em;*/
+  }
+}
+gimmick {
+  display: inline-block;
+  padding: 6px 0.5em 0.5em 46px;
+  margin: 0.5em 0;
+  /*width: 20em;*/
+  width: 100%;
+  border: 1px solid;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+}
+gimmick:before {
+  margin-left: -40px;
+  margin-bottom: -32px;
+  display: block;
+}
+gimmick label {
+  font-size: 1.5em;
+  display: block;
+}
+gimmick rule {
+  display: block;
+}
+gimmick.gear {
+  background: linear-gradient(0deg, rgba(98, 78, 83, 0.15), rgba(98, 78, 83, 0));
+}
+gimmick.gear:before {
+  content: url("../img/gear.png");
+}
+gimmick.weakness {
+  background: linear-gradient(0deg, rgba(84, 125, 163, 0.15), rgba(84, 125, 163, 0));
+}
+gimmick.weakness:before {
+  content: url("../img/weakness.png");
+}
+gimmick.powerup {
+  background: linear-gradient(0deg, rgba(175, 134, 9, 0.15), rgba(175, 134, 9, 0));
+}
+gimmick.powerup:before {
+  content: url("../img/powerup.png");
+}
+gimmick.team {
+  background: linear-gradient(0deg, rgba(111, 149, 19, 0.15), rgba(111, 149, 19, 0));
+}
+gimmick.team:before {
+  content: url("../img/team.png");
+}
+gimmick.shape, gimmick.trait {
+  background: linear-gradient(0deg, rgba(149, 66, 55, 0.15), rgba(149, 66, 55, 0));
+}
+gimmick.shape:before, gimmick.trait:before {
+  content: url("../img/shape.png");
+}
+@media print {
+  gimmick {
+    border-color: #999;
+    border-width: 0.01pt;
+  }
+}
+card {
+  display: inline-block;
+  padding: 6px 0.5em 0.5em 46px;
+  margin: 0.5em 0;
+  /*width: 20em;*/
+  width: 100%;
+  border: 1px solid;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+}
+card:before {
+  margin-left: -40px;
+  margin-bottom: -32px;
+  display: block;
+}
+card label {
+  font-size: 1.5em;
+  display: block;
+}
+card rule {
+  display: block;
 }
 
-gimmick{
-	display: inline-block;
-	padding: 6px 0.5em 0.5em 46px;
-	margin: 0.5em 0;
-	/*width: 20em;*/
-	width: 100%;
-	border: 1px solid;
-	border-radius: 0.5em;
-	box-sizing: border-box;
-	background: linear-gradient( 0deg , rgba( 0 , 0 , 0 , 0.15 ) , rgba( 0 , 0 , 0 , 0.0 ) );
+@media print {
+  card {
+    border-color: #999;
+    border-width: 0.01pt;
+  }
+}
+.discuss-marker {
+  color: #aa3333;
 }
 
-gimmick:before{
-	margin-left: -40px;
-	margin-bottom: -32px;
-	display: block;
+variant {
+  font-style: italic;
 }
 
-gimmick.gear{
-	background: linear-gradient( 0deg , rgba( 98 , 78 , 83 , 0.15 ) , rgba( 98 , 78 , 83 , 0.0 ) );
+variant + variant:before {
+  content: ", ";
 }
 
-gimmick.gear:before{
-	content: url("../img/gear.png");
+require {
+  display: block;
+}
+require:before {
+  content: "✔";
+  content: "☑ requires: ";
+  content: "⚠️ requires ";
 }
 
-gimmick.weakness{
-	background: linear-gradient( 0deg , rgba( 84 , 125 , 163 , 0.15 ) , rgba( 84 , 125 , 163 , 0.0 ) );
-}
-
-gimmick.weakness:before{
-	content: url("../img/weakness.png");
-}
-
-gimmick.powerup{
-	background: linear-gradient( 0deg , rgba( 175 , 134 , 9 , 0.15 ) , rgba( 175 , 134 , 9 , 0.0 ) );
-}
-
-gimmick.powerup:before{
-	content: url("../img/powerup.png");
-}
-
-gimmick.team{
-	background: linear-gradient( 0deg , rgba( 111 , 149 , 19 , 0.15 ) , rgba( 111 , 149 , 19 , 0.0 ) );
-}
-
-gimmick.team:before{
-	content: url("../img/team.png");
-}
-
-gimmick.race{
-	background: linear-gradient( 0deg , rgba( 149 , 66 , 55 , 0.15 ) , rgba( 149 , 66 , 55 , 0.0 ) );
-}
-
-gimmick.race:before{
-	content: url("../img/race.png");
-}
-
-label{
-	font-size: 1.5em;
-}
-
-tier{
-	font-style: italic;
-	font-size: 0.76em;
-}
-
-tier:before{
-	content: "Tier ";
-}
-
-tier.exclusive:after{
-	content: " (ausschließlich)";
-}
-
-.discuss-marker{
-	color: #aa3333;
-}
-
-variant:after{
-	content: ", ";
-}
-
-cost{
-	display: block;
-	font-style: italic;
-	font-size: 0.76em;
-}
-
-cost::before{
-	content: "Costs: ";
-}
-
-@media( min-width: 500px ){
-	.gimmick-container{
-		column-count: 2;
-	}
-}
-
-@media( min-width: 900px ){
-	.gimmick-container{
-		column-count: 3;
-	}
-}
-
-@media( min-width: 1300px ){
-	.gimmick-container{
-		column-count: 4;
-	}
-}
-
-@media( min-width: 1700px ){
-	.gimmick-container{
-		column-count: 5;
-	}
-}
-
-@media( min-width: 2100px ){
-	.gimmick-container{
-		column-count: 6;
-	}
-}
-
-
-@media print{
-	html{
-		color: #000;
-		zoom: 0.7; 
-		-moz-transform: scale(0.7); 
-		-moz-transform-origin: 0 0;
-	}
-
-	.gimmick-container{
-		column-count: 3;
-		/*font-size: 0.85em;*/
-	}
-
-	gimmick{
-		border-color: #999;
-		border-width: 0.01pt;
-	}
-}
+/*# sourceMappingURL=style.css.map */
