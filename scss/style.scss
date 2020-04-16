@@ -9,17 +9,51 @@
 
 variant{
 	font-style: italic;
+	font-size: 85%;
+
+	&:after {
+		content: ",";
+	}
+
+	&:nth-last-of-type(1):after {
+		content: "";
+	}
+
+	&:nth-last-of-type(2):after {
+		content: " or";
+	}
+
+	&:nth-of-type(1):before {
+		content: "e.g. ";
+	}
 }
 
-variant + variant:before{
-	content: ", ";
+fluff {
+	@extend %block;
+	color: #789;
+	font-family: 'Times New Roman', Times, serif;
+	font-style: italic;
+
+	&:before {
+		content:"“";
+	}
+
+	&:after {
+		content: "”";
+	}
 }
 
 require{
-	display: block;
+	@extend %block;
 	&:before{
 		content: "✔";
 		content: "☑ requires: ";
 		content: "⚠️ requires ";
+	}
+}
+
+@media print{
+	fluff{
+		color: #000;
 	}
 }

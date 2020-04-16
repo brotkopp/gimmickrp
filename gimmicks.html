@@ -21,12 +21,17 @@
 			<rule>-1 on melee checks</rule>
 			<rule>any incoming hit is considered to be a heavy hit</rule>
 		</gimmick>
-		<gimmick class="shape">
+		<gimmick class="shape movement melee ranged">
 			<label>4-legged</label>
 			<variant>dog</variant>
-			<variant>centaur</variant>
 			<rule>BMR is increased by 3</rule>
 			<rule>-1 on ranged- and melee checks</rule>
+		</gimmick>
+		<gimmick class="shape team-member-count movement">
+			<label>4-legged and 2-armed</label>
+			<variant>centaur</variant>
+			<rule>BMR is increased by 3</rule>
+			<rule>team member count is increased by 1</rule>
 		</gimmick>
 		<gimmick class="trait">
 			<label>Agile</label>
@@ -38,38 +43,43 @@
 			<label>Undying</label>
 			<variant>zombie</variant>
 			<rule>does not go out of action</rule>
-			<rule>difficulty for recory is 5</rule>
+			<rule>difficulty for recovery is 5</rule>
 			<rule>models gone down count as out of action in respect of the end of battle</rule>
 		</gimmick>
 		<gimmick class="trait">
 			<label>Redeployable</label>
 			<variant>skeleton</variant>
 			<variant>drone</variant>
-			<rule>is taken out of action on hit</rule>
+			<variant>demon</variant>
+			<variant>elemental</variant>
+			<rule>does not roll lose or win dice</rule>
+			<rule>counts as taken out of action in concerning the end of battle</rule>
 			<rule>after being taken out of action may be redeployed by a redeployment host</rule>
 		</gimmick>
 		<gimmick class="trait team-member-count">
 			<label>Redeployment Host</label>
 			<variant>necromancer</variant>
 			<variant>technomancer</variant>
-			<rule>may redeploy redeployables in melee range by performing a complex action</rule>
+			<rule>may redeploy redeployables to a position in melee range by performing a complex action</rule>
 			<rule>team member count is increased by 0.5</rule>
 		</gimmick>
 		<gimmick class="gear armour">
 			<label>God's Armour</label>
-			<rule>difficulty of being hurt is 2</rule>
+			<fluff>Some wonder whether he first lost his mind or his clothes. But don't be fooled! A well trained fighter might prefer speed over protection...</fluff>
+			<rule>armour is 2</rule>
 			<rule>BMR is increased by 1</rule>
 		</gimmick>
 		<gimmick class="gear armour">
 			<label>Light Armour</label>
-			<rule>difficulty of being hurt is 4</rule>
-			<rule>BMR is decreased by 1</rule>
+			<rule>armour is 4</rule>
+			<rule>BMR is reduced by 1</rule>
 		</gimmick>
 		<gimmick class="gear armour">
 			<label>Heavy Armour</label>
-			<rule>difficulty of being hurt is 4</rule>
+			<rule>armour is 4</rule>
 			<rule>incomming heavy hits are considered to be regular hits</rule>
-			<rule>BMR is decreased by 2</rule>
+			<rule>BMR is reduced by 1</rule>
+			<rule>movement actions cost +1 AP</rule>
 		</gimmick>
 		<gimmick class="gear melee">
 			<label>Toothless</label>
@@ -86,14 +96,13 @@
 			<rule>-1 on movement checks</rule>
 		</gimmick>
 		<gimmick class="gear weapon melee">
-			<label>Heavy Melee Weapon</label>
-			<variant>two handed melee weapon</variant>
+			<label>Two Handed Melee Weapon</label>
 			<rule>hits are heavy</rule>
 			<rule>attack actions cost +1 AP</rule>
 		</gimmick>
 		<gimmick class="gear">
 			<label>Shield</label>
-			<rule>+1 on melee checks that do not inflict damage</rule>
+			<rule>+1 on melee checks if the model waives to inflict damage</rule>
 			<rule>-1 on movement checks</rule>
 		</gimmick>
 		<gimmick class="gear weapon ranged">
@@ -139,7 +148,7 @@
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Inspiring</label>
-			<rule>after performing a succesful action lets another team member perform that same kind of action without cost of AP</rule>
+			<rule>after performing a succesful action the rest of the team gains +1 for checks on the same type of action during the current turn</rule>
 		</gimmick>
 		<gimmick class="powerup ranged">
 			<label>Marksman</label>
@@ -148,6 +157,10 @@
 		<gimmick class="powerup melee">
 			<label>Martial Artist</label>
 			<rule>+1 on melee checks</rule>
+		</gimmick>
+		<gimmick class="powerup">
+			<label>Not Dead Yet</label>
+			<rule>may react with recovery check when being targeted by an attack</rule>
 		</gimmick>
 		<gimmick class="powerup melee">
 			<label>Fighting in the Shade</label>
@@ -158,6 +171,12 @@
 			<label>Pistolero</label>
 			<rule>may react to being shot at by shooting back</rule>
 		</gimmick>
+		<gimmick class="team">
+			<label>Elite Warriors</label>
+			<fluff>These guys fight alongside eachother as long as I can think. They had some losses but they still move as if they where limbs of one and the same body.</fluff>
+			<rule>the team gains 2 AP at the beginning of each turn</rule>
+			<rule>the team's total team member count is reduced by 1</rule>
+		</gimmick>
 		<gimmick class="outdated powerup melee discuss-marker">
 			<label>Protector</label>
 			<rule>May move up to 6 inches in order to protect another model in melee</rule>
@@ -167,8 +186,8 @@
 			<rule>may react on any opposing melee attack in its melee range by counter attack or defending the target</rule>
 		</gimmick>
 		<gimmick class="powerup">
-			<label>Fighting Nature</label>
-			<rule>gain the success value of a recovery check as APs</rule>
+			<label>Second Wind</label>
+			<rule>gain a free action after succesful recovery</rule>
 		</gimmick>
 		<gimmick class="powerup">
 			<label>Tough</label>
@@ -181,7 +200,15 @@
 		<gimmick class="weakness">
 			<label>Frail</label>
 			<!--<rule>the model is taken out of action right away when hit with a success value of 2 or higher</rule>-->
-			<rule>the model's difficulty of getting hurt is reduced by 1</rule>
+			<rule>the model's armour is reduced by 1</rule>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Panic</label>
+			<rule>for 3 AP the opposing team may perform a movement action with this model</rule>
+		</gimmick>
+		<gimmick class="weakness">
+			<label>Madness</label>
+			<rule>for 5 AP the opposing team may perform a melee action with this model</rule>
 		</gimmick>
 		<gimmick class="weakness">
 			<label>Crippled</label>
@@ -200,26 +227,34 @@
 			<label>Hesitant</label>
 			<rule>the models 1st action in a turn costs +1 AP</rule>
 		</gimmick>
-		<gimmick class="team">
-			<label>Frenzy</label>
-			<rule>the team gains 2 AP for each opponent it brings down or puts out of action</rule>
+		<gimmick class="weakness">
+			<label>Dumb</label>
+			<rule>may neither perform or react to complex actions</rule>
 		</gimmick>
-		<gimmick class="team">
+		<!-- <gimmick class="weakness">
+			<label>Death Wish</label>
+			<rule>may not perform defensive melee reactions</rule>
+		</gimmick> -->
+		<gimmick class="powerup melee">
+			<label>Frenzy</label>
+			<rule>after performing a successful melee attack the model may perform another melee attack for just 1 AP</rule>
+		</gimmick>
+		<!-- <gimmick class="team">
 			<label>Concrete Soccer</label>
 			<rule>-1 on initative checks</rule>
 			<rule>+1 on defensive melee checks</rule>
-		</gimmick>
-		<gimmick class="team">
+		</gimmick> -->
+		<!-- <gimmick class="team">
 			<label>Second Wind</label>
 			<rule>the team gains 2 AP for each member that recovers</rule>
-		</gimmick>
+		</gimmick> -->
 		<gimmick class="team">
 			<label>Vengeance</label>
 			<rule>+1 on initiative checks for each member that is put out of action until the end of battle</rule>
 		</gimmick>
-		<gimmick class="outdated team">
+		<gimmick class="team">
 			<label>Reactive Tactics</label>
-			<rule>The team has a reduced AP pool by -4 and gains 1 AP for each AP another team spends</rule>
+			<rule>may choose to postpone its turn after that of another player gaining 1 AP for that round</rule>
 		</gimmick>
 		<gimmick class="outdated body">
 			<label>Elf</label>
@@ -252,11 +287,6 @@
 		<gimmick class="outdated team">
 			<label>Outlaws</label>
 			<rule>May not spend riches. A 1 on the win table recruits a new team member even beyond its maximum size.</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Dumb</label>
-			<cost>-1</cost>
-			<rule>May neither perform or react to complex actions</rule>
 		</gimmick>
 		<gimmick class="outdated weakness">
 			<label>Narcistic</label>
@@ -348,11 +378,6 @@
 			<cost>1</cost>
 			<rule>May not be attacked until it attacks itself</rule>
 		</gimmick>
-		<gimmick class="outdated powerup movement">
-			<label>Acrobat</label>
-			<cost>1</cost>
-			<rule>+1 on movement checks</rule>
-		</gimmick>
 		<gimmick class="outdated powerup discuss-marker">
 			<label>Poison</label>
 			<cost>1</cost>
@@ -362,11 +387,6 @@
 			<label>Cold blooded</label>
 			<cost>1</cost>
 			<rule>+1 on attacks that are unhindered</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Fighting Nature</label>
-			<cost>1</cost>
-			<rule>+1 on all checks after recovering</rule>
 		</gimmick>
 		<gimmick class="outdated gear armour">
 			<label>Helmet</label>
@@ -383,10 +403,9 @@
 			<cost>1</cost>
 			<rule>May perform a movement action between turns for 1 AP without being reacted to or joined.</rule>
 		</gimmick>
-		<gimmick class="outdated powerup movement">
+		<gimmick class="powerup movement">
 			<label>Evasive</label>
-			<cost>1</cost>
-			<rule>My react to being shot at by performing a movement action as interfering check.</rule>
+			<rule>may react to being shot at by performing a movement action</rule>
 		</gimmick>
 		<gimmick class="outdated powerup melee">
 			<label>Savage Blow</label>
@@ -395,7 +414,15 @@
 		</gimmick>
 		<card class="tactical">
 			<label>Sneak Attack</label>
-			<rule>may redeploy any model that is not gone out of action and not in sight of the enemy anywhere on the battlefield on the beginning of the turn</rule>
+			<rule>redeploy any model that is not gone out of action and not in sight of the enemy anywhere on the battlefield on the beginning of the turn</rule>
+		</card>
+		<card class="tactical">
+			<label>Trigger Happy</label>
+			<rule>one model may react to any action in sight by shooting</rule>
+		</card>
+		<card class="tactical">
+			<label>Snap the Trap</label>
+			<rule>end the enemy's turn after performing a successful counter attack</rule>
 		</card>
 		
 		<!--

@@ -5,6 +5,12 @@ html {
   background-color: rgba(255, 255, 255, 0);
 }
 
+fluff, require, card rule, gimmick rule {
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
 .gimmick-container {
   column-count: 1;
 }
@@ -64,11 +70,8 @@ gimmick:before {
   display: block;
 }
 gimmick label {
+  display: block;
   font-size: 1.5em;
-  display: block;
-}
-gimmick rule {
-  display: block;
 }
 gimmick.gear {
   background: linear-gradient(0deg, rgba(98, 78, 83, 0.15), rgba(98, 78, 83, 0));
@@ -80,13 +83,13 @@ gimmick.weakness {
   background: linear-gradient(0deg, rgba(84, 125, 163, 0.15), rgba(84, 125, 163, 0));
 }
 gimmick.weakness:before {
-  content: url("../img/weakness.png");
+  content: url("../img/weakness-tile.svg");
 }
 gimmick.powerup {
   background: linear-gradient(0deg, rgba(175, 134, 9, 0.15), rgba(175, 134, 9, 0));
 }
 gimmick.powerup:before {
-  content: url("../img/powerup.png");
+  content: url("../img/powerup-tile.svg");
 }
 gimmick.team {
   background: linear-gradient(0deg, rgba(111, 149, 19, 0.15), rgba(111, 149, 19, 0));
@@ -103,7 +106,7 @@ gimmick.shape:before, gimmick.trait:before {
 @media print {
   gimmick {
     border-color: #999;
-    border-width: 0.01pt;
+    border-width: 0.1pt;
   }
 }
 card {
@@ -123,11 +126,14 @@ card:before {
   display: block;
 }
 card label {
+  display: block;
   font-size: 1.5em;
-  display: block;
 }
-card rule {
-  display: block;
+card.tactical {
+  background: linear-gradient(0deg, rgba(84, 163, 94, 0.15), rgba(84, 163, 94, 0));
+}
+card.tactical:before {
+  content: url("../img/card-tactical.svg");
 }
 
 @media print {
@@ -142,19 +148,43 @@ card rule {
 
 variant {
   font-style: italic;
+  font-size: 85%;
+}
+variant:after {
+  content: ",";
+}
+variant:nth-last-of-type(1):after {
+  content: "";
+}
+variant:nth-last-of-type(2):after {
+  content: " or";
+}
+variant:nth-of-type(1):before {
+  content: "e.g. ";
 }
 
-variant + variant:before {
-  content: ", ";
+fluff {
+  color: #789;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+fluff:before {
+  content: "“";
+}
+fluff:after {
+  content: "”";
 }
 
-require {
-  display: block;
-}
 require:before {
   content: "✔";
   content: "☑ requires: ";
   content: "⚠️ requires ";
+}
+
+@media print {
+  fluff {
+    color: #000;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 @charset "utf-8";
+@use "layout";
 
 card{
 	display: inline-block;
@@ -18,12 +19,19 @@ card{
 	}
 
 	label{
-		font-size: 1.5em;
 		display: block;
+		font-size: 1.5em;
 	}
 
 	rule{
-		display: block;
+		@extend %block;
+	}
+
+	&.tactical{
+		background: linear-gradient( 0deg , rgba(84, 163, 94, 0.15) , rgba(84, 163, 94 , 0.0) );
+		&:before{
+			content: url("../img/card-tactical.svg");
+		}
 	}
 }
 

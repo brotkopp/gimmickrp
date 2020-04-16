@@ -1,4 +1,5 @@
 @charset "utf-8";
+@use "layout";
 
 gimmick{
 	display: inline-block;
@@ -18,12 +19,12 @@ gimmick{
 	}
 
 	label{
-		font-size: 1.5em;
 		display: block;
+		font-size: 1.5em;
 	}
 
 	rule{
-		display: block;
+		@extend %block;
 	}
 
 	&.gear{
@@ -36,14 +37,16 @@ gimmick{
 	&.weakness{
 		background: linear-gradient( 0deg , rgba( 84 , 125 , 163 , 0.15 ) , rgba( 84 , 125 , 163 , 0.0 ) );
 		&:before{
-			content: url("../img/weakness.png");
+			//content: url("../img/weakness.png");
+			content: url("../img/weakness-tile.svg");
 		}
 	}
 
 	&.powerup{
 		background: linear-gradient( 0deg , rgba( 175 , 134 , 9 , 0.15 ) , rgba( 175 , 134 , 9 , 0.0 ) );
 		&:before{
-			content: url("../img/powerup.png");
+			//content: url("../img/powerup.png");
+			content: url("../img/powerup-tile.svg");
 		}
 	}
 
@@ -69,6 +72,6 @@ gimmick{
 @media print{
 	gimmick{
 		border-color: #999;
-		border-width: 0.01pt;
+		border-width: 0.1pt;
 	}
 }

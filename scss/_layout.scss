@@ -6,6 +6,12 @@ html{
 	background-color: rgba(255,255,255,0.0);
 }
 
+%block {
+	display: block;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
 .gimmick-container{
 	column-count: 1;
 }
