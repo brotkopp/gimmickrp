@@ -10,732 +10,415 @@
 		<link rel="stylesheet" type="text/css" charset="utf-8" href="css/style.css" />
 	</head>
 	<body>
-		<gimmick class="shape team-member-count">
-			<label>Big</label>
-			<rule>team member count is increased by 1</rule>
-			<rule>may ignore any incoming hit at the cost of one AP (no credit: the AP must be available at the moment of the hit)</rule>
+		<gimmick power="1" tier="0">
+			<label>Juggernaut</label>
+			<variant>tank drone</variant>
+			<variant>rinoceros</variant>
+			<rule>may destroy obstacles instead of overcomming them during movement</rule>
 		</gimmick>
-		<gimmick class="shape team-member-count">
-			<label>Small</label>
-			<rule>team member count is reduced by 0.5</rule>
-			<rule>-1 on melee checks</rule>
-			<rule>any incoming hit is considered to be a heavy hit</rule>
+		<gimmick power="1" tier="0">
+			<label>Heavily Armoured</label>
+			<variant>WH40K Terminator armour</variant>
+			<rule>protection level is 5</rule>
+			<rule>-1 on recovery checks</rule>
 		</gimmick>
-		<gimmick class="shape movement melee ranged">
-			<label>4-legged</label>
-			<variant>dog</variant>
-			<rule>BMR is increased by 3</rule>
-			<rule>-1 on ranged- and melee checks</rule>
+		<gimmick power="1" tier="0">
+			<label>Special Protection</label>
+			<variant>plate armour</variant>
+			<rule>incomming heavy hits are dealt with like they are regular hits</rule>
 		</gimmick>
-		<gimmick class="shape team-member-count movement">
-			<label>4-legged and 2-armed</label>
-			<variant>centaur</variant>
-			<rule>BMR is increased by 3</rule>
-			<rule>team member count is increased by 1</rule>
+		<gimmick power="1">
+			<label>Mob Move</label>
+			<rule>the model may join any friendly model's movement action that begins in or passes through base contact without spending AP or exausting its maximum action count for that turn</rule>
 		</gimmick>
-		<gimmick class="trait">
-			<label>Agile</label>
-			<variant>ape</variant>
-			<rule>movement actions are unhindered by obstacles or ground condition</rule>
-			<rule>movement actions cost 2AP</rule>
+		<gimmick power="1">
+			<label>Leader</label>
+			<require>cards</require>
+			<rule>the player may activate leadersip cards as long as this model is not taken out of action</rule>
 		</gimmick>
-		<gimmick class="trait">
-			<label>Undying</label>
-			<variant>zombie</variant>
-			<rule>does not go out of action</rule>
-			<rule>difficulty for recovery is 5</rule>
-			<rule>models gone down count as out of action in respect of the end of battle</rule>
+		<gimmick power="1">
+			<label>Techno/Mage</label>
+			<require>cards</require>
+			<variant>witch</variant>
+			<variant>battle mage</variant>
+			<variant>gadgeteer</variant>
+			<rule>the player may activate techno/magical cards as long as this model is not taken out of action</rule>
 		</gimmick>
-		<gimmick class="trait">
-			<label>Redeployable</label>
-			<variant>skeleton</variant>
-			<variant>drone</variant>
-			<variant>demon</variant>
-			<variant>elemental</variant>
-			<rule>does not roll lose or win dice</rule>
-			<rule>counts as taken out of action in concerning the end of battle</rule>
-			<rule>after being taken out of action may be redeployed by a redeployment host</rule>
+		<gimmick power="1">
+			<label>Covered Ops Specialist</label>
+			<require>cards</require>
+			<rule>the player may activate covered ops cards as long as this model is not taken out of action</rule>
 		</gimmick>
-		<gimmick class="trait team-member-count">
-			<label>Redeployment Host</label>
-			<variant>necromancer</variant>
-			<variant>technomancer</variant>
-			<rule>may redeploy redeployables to a position in melee range by performing a complex action</rule>
-			<rule>team member count is increased by 0.5</rule>
+		<gimmick power="1" tier="0">
+			<label>Extra Punch</label>
+			<variant>sniper rifle</variant>
+			<variant>crossbow</variant>
+			<variant>light saber</variant>
+			<variant>the magical sword of whatnot</variant>
+			<variant>grand fathers troll slayer axe</variant>
+			<rule>the weapon inflicts heavy hits</rule>
 		</gimmick>
-		<gimmick class="gear armour">
-			<label>God's Armour</label>
-			<fluff>Some wonder whether he first lost his mind or his clothes. But don't be fooled! A well trained fighter might prefer speed over protection...</fluff>
-			<rule>armour is 2</rule>
-			<rule>BMR is increased by 1</rule>
+		<gimmick power="1" tier="0">
+			<label>Grenadier</label>
+			<require>cards</require>
+			<rule>may discard one card to throw a granade: the granade explodes 1/2 d6 inch away in a random direction from the designated destination. It hits every model in a 2 inch radius and puts every model down 2 inches further.</rule>
 		</gimmick>
-		<gimmick class="gear armour">
-			<label>Light Armour</label>
-			<rule>armour is 4</rule>
-			<rule>BMR is reduced by 1</rule>
+		<gimmick power="1" tier="0">
+			<label>Sniper Scope</label>
+			<require>ranged weapon</require>
+			<rule>may spend additional AP to gain +1 each on a ranged check for an attack over at least 9 inch distance</rule>
 		</gimmick>
-		<gimmick class="gear armour">
-			<label>Heavy Armour</label>
-			<rule>armour is 4</rule>
-			<rule>incomming heavy hits are considered to be regular hits</rule>
-			<rule>BMR is reduced by 1</rule>
-			<rule>movement actions cost +1 AP</rule>
+		<gimmick power="1">
+			<label>Savage Attack</label>
+			<variant>sustained fire</variant>
+			<variant>aiming for the weak spot</variant>
+			<rule>may perform an attack for + 1 AP that inflicts heavy damage</rule>
 		</gimmick>
-		<gimmick class="gear melee">
-			<label>Toothless</label>
-			<variant>unarmed</variant>
-			<rule>-1 on melee checks</rule>
-			<rule>+1 on movement checks</rule>
+		<gimmick power="-1">
+			<label>Hanger-On</label>
+			<rule>-1 on all checks while no other team member is in melee range</rule>
 		</gimmick>
-		<gimmick class="gear weapon melee">
-			<label>Superior Melee Weapon</label>
-			<variant>spear</variant>
-			<variant>long sword</variant>
-			<variant>staff</variant>
-			<rule>+1 on melee checks</rule>
-			<rule>-1 on movement checks</rule>
+		<gimmick power="-1">
+			<label>Morale Bottleneck</label>
+			<rule>when receiving damage the team loses 1 AP</rule>
 		</gimmick>
-		<gimmick class="gear weapon melee">
-			<label>Two Handed Melee Weapon</label>
-			<rule>hits are heavy</rule>
-			<rule>attack actions cost +1 AP</rule>
+		<gimmick power="-1">
+			<label>Fooling Around</label>
+			<rule>-1 on all checks until the first team member goes out of action</rule>
 		</gimmick>
-		<gimmick class="gear">
-			<label>Shield</label>
-			<rule>+1 on melee checks if the model waives to inflict damage</rule>
-			<rule>-1 on movement checks</rule>
+		<gimmick power="-1">
+			<label>Honour</label>
+			<rule>may not attack when the opposing team is outnumbered</rule>
 		</gimmick>
-		<gimmick class="gear weapon ranged">
-			<label>Light Ranged Weapon</label>
-			<variant>sling</variant>
-			<variant>pistol</variant>
-			<rule>enables ranged attacks</rule>
-			<rule>- 1 on ranged checks</rule>
+		<gimmick power="-1">
+			<label>Funky</label>
+			<rule>may not move any closer to an enemy model than another friendly model currently is</rule>
 		</gimmick>
-		<gimmick class="gear weapon ranged">
-			<label>Regular Ranged Weapon</label>
-			<variant>bow</variant>
-			<variant>rifle</variant>
-			<rule>enables ranged attacks</rule>
-			<rule>-1 on movement checks</rule>
+		<gimmick power="-1">
+			<label>Helpless</label>
+			<variant>C3PO</variant>
+			<rule>may not move unless it would reach base contact with a friendly model</rule>
 		</gimmick>
-		<gimmick class="gear weapon ranged">
-			<label>Heavy Ranged Weapon</label>
-			<variant>machine gun</variant>
-			<variant>cross bow</variant>
-			<rule>enables ranged attacks</rule>
-			<rule>hits are heavy</rule>
-			<rule>attack actions cost +1 AP</rule>
-			<rule>BMR is reduced by 1</rule>
-			<rule>-1 on movement checks</rule>
+		<gimmick power="-1">
+			<label>Impatient</label>
+			<rule>must perform at least one action per round if possible</rule>
 		</gimmick>
-		<gimmick class="gear weapon ranged">
+		<gimmick power="-1">
+			<label>Pacifist</label>
+			<rule>melee and ranged attacks performed by this model cause no damage</rule>
+		</gimmick>
+		<gimmick power="-1" tier="0">
+			<label>Heavy Load</label>
+			<variant>machine gun + ammo</variant>
+			<variant>full plate</variant>
+			<variant>two-handed battle axe</variant>
+			<rule>the movement range is reduced by 1</rule>
+		</gimmick>
+		<gimmick power="-1">
+			<label>Crippled</label>
+			<rule>the movement range is reduced by 2</rule>
+		</gimmick>
+		<gimmick power="1" tier="0">
+			<label>Fleet of Foot</label>
+			<rule>the movement range is increased by 1</rule>
+		</gimmick>
+		<gimmick power="1">
+			<label>Sprinter</label>
+			<rule>may extend the movement range of one movement action by 3 for 1 AP</rule>
+		</gimmick>
+		<gimmick power="1">
+			<label>Lucky Charm</label>
+			<require>cards</require>
+			<rule>may ignore any hit that puts the model out of action for discarding one card</rule>
+		</gimmick>
+		<gimmick power="-1" tier="0">
+			<label>Mind Damage</label>
+			<variant>spirit touch</variant>
+			<variant>seductive chant</variant>
+			<variant>psycho gas</variant>
+			<rule>instead of causing damage the targeted team loses 1 AP</rule>
+		</gimmick>
+		<gimmick power="-1" tier="0">
+			<label>Immovable</label>
+			<variant>turret</variant>
+			<variant>aggressive flora</variant>
+			<rule>may be placed anywhere at the beginning of the match</rule>
+			<rule>may not move</rule>
+		</gimmick>
+		<gimmick power="1" tier="0">
+			<label>Mind Control</label>
+			<require>Mind Damage</require>
+			<rule>when hitting a model whose team has no AP left the player may take control of that model for one free action</rule>
+			<problem>In combination with the order of turns this might be a broken construct</problem>
+		</gimmick>
+		<gimmick power="1">
+			<label>Steady Spirit</label>
+			<rule>+1 on any check that interferes with a mind damage attack</rule>
+		</gimmick>
+		<gimmick power="1">
+			<label>Coordinator</label>
+			<rule>may apply +1 on AP check given that the model does not perform any action during that round</rule>
+		</gimmick>
+		<gimmick power="1">
+			<label>Hotspur</label>
+			<fluff>Definitely not a team player – but saved the day once or twice!</fluff>
+			<rule>may apply -1 on AP check given that the model does perform an action during that round</rule>
+		</gimmick>
+		<gimmick power="-1">
+			<label>Frail</label>
+			<rule>any successful incomming hit will cause the model to go out of action</rule>
+		</gimmick>
+		<gimmick power="-1">
+			<label>Vulnerable</label>
+			<rule>protection level is reduced by 1</rule>
+		</gimmick>
+		<gimmick power="1" tier="0">
 			<label>Indirect Attacks</label>
 			<variant>flame thrower</variant>
 			<variant>alien homing projectile bio glove</variant>
 			<require>ranged weapon</require>
-			<rule>range is limited to 8 inch</rule>
 			<rule>difficulty for cover and prone is not applied</rule>
 		</gimmick>
-		<gimmick class="gear weapon ranged">
+		<gimmick power="1" tier="0">
 			<label>Area Damage</label>
 			<variant>flame thrower</variant>
-			<variant>granade</variant>
 			<variant>machine gun</variant>
 			<require>ranged weapon</require>
-			<rule>hits all targets in melee range of the targeted model</rule>
+			<rule>hits all models in melee range of the targeted model at the cost of 1 aditional AP</rule>
+		</gimmick>
+		<gimmick power="1" tier="0">
+			<label>Slashing Strike</label>
+			<variant>two-handed sword</variant>
+			<variant>flail</variant>
+			<rule>may attack two adjacent enemy models in melee range with one attack for 1 additional AP</rule>
+			<problem>This is pretty much the same as Area Damage...</problem>
+		</gimmick>
+		<gimmick power="-1">
+			<label>Cursed</label>
+			<rule>reroutes hits on any model in melee range to itself</rule>
+		</gimmick>
+		<gimmick power="1">
+			<label>Role Model</label>
+			<rule>duplicates all gimmicks except this one to another model with the same outfit overriding the target model's gimmicks</rule>
+			<problem>i really am not sure about this</problem>
+		</gimmick>
+		<gimmick power="1">
+			<label>Cruel</label>
+			<rule>gains +1 on attacks on models that have gone down</rule>
+		</gimmick>
+		<gimmick power="-1">
+			<label>One Man Show</label>
+			<rule>may not act when others do in the same turn</rule>
+		</gimmick>
+		<gimmick power="-1" tier="0">
+			<label>Fuzzy Aim</label>
+			<variant>flame thrower</variant>
+			<variant>granade</variant>
+			<variant>Uzi</variant>
+			<require>ranged weapon</require>
 			<rule>-1 on ranged checks</rule>
 		</gimmick>
-		<gimmick class="powerup">
-			<label>Inspiring</label>
-			<rule>after performing a succesful action the rest of the team gains +1 for checks on the same type of action during the current turn</rule>
+		<gimmick power="-1" tier="0">
+			<label>Limited Range</label>
+			<variant>flame thrower</variant>
+			<variant>Whip</variant>
+			<require>ranged weapon</require>
+			<rule>may only target models within 6 inch range</rule>
 		</gimmick>
-		<gimmick class="powerup ranged">
-			<label>Marksman</label>
-			<rule>+1 on ranged checks</rule>
+		<gimmick power="1">
+			<label>Libero</label>
+			<rule>may perform a free movement action if no other movement action is performed during that turn</rule>
 		</gimmick>
-		<gimmick class="powerup melee">
+		<gimmick power="-1" tier="0">
+			<label>Dumb</label>
+			<rule>may neither perform or react to complex actions</rule>
+			<rule>may not activate any cards</rule>
+			<problem>One rule refers to cards, the other does not. So does this gimmick require cards or not?</problem>
+		</gimmick>
+		<gimmick power="1">
+			<label>Motivated</label>
+			<rule>the team gains 1 AP on the begin of the turn when this model is not gone down or out of action</rule>
+		</gimmick>
+		<gimmick power="1">
 			<label>Martial Artist</label>
 			<rule>+1 on melee checks</rule>
 		</gimmick>
-		<gimmick class="powerup">
-			<label>Not Dead Yet</label>
-			<rule>may react with recovery check when being targeted by an attack</rule>
+		<gimmick power="1">
+			<label>Marksmanship</label>
+			<rule>+1 on ranged checks</rule>
 		</gimmick>
-		<gimmick class="powerup melee">
-			<label>Fighting in the Shade</label>
-			<require>shield</require>
-			<rule>may react to being shot at with melee defense</rule>
+		<gimmick power="1">
+			<label>Athlete</label>
+			<rule>may overcome one additional obstacle during movement</rule>
+			<rule>climbing only costs 1 AP</rule>
 		</gimmick>
-		<gimmick class="powerup ranged">
-			<label>Pistolero</label>
-			<rule>may react to being shot at by shooting back</rule>
-		</gimmick>
-		<gimmick class="team">
-			<label>Elite Warriors</label>
-			<fluff>These guys fight alongside eachother as long as I can think. They had some losses but they still move as if they where limbs of one and the same body.</fluff>
-			<rule>the team gains 2 AP at the beginning of each turn</rule>
-			<rule>the team's total team member count is reduced by 1</rule>
-		</gimmick>
-		<gimmick class="outdated powerup melee discuss-marker">
-			<label>Protector</label>
-			<rule>May move up to 6 inches in order to protect another model in melee</rule>
-		</gimmick>
-		<gimmick class="powerup melee">
-			<label>Guardian</label>
-			<rule>may react on any opposing melee attack in its melee range by counter attack or defending the target</rule>
-		</gimmick>
-		<gimmick class="powerup">
-			<label>Second Wind</label>
-			<rule>gain a free action after succesful recovery</rule>
-		</gimmick>
-		<gimmick class="powerup">
+		<gimmick power="1">
 			<label>Tough</label>
 			<rule>+1 on recovery checks</rule>
 		</gimmick>
-		<gimmick class="powerup">
-			<label>Athlete</label>
-			<rule>+1 on movment checks</rule>
-		</gimmick>
-		<gimmick class="weakness">
-			<label>Frail</label>
-			<!--<rule>the model is taken out of action right away when hit with a success value of 2 or higher</rule>-->
-			<rule>the model's armour is reduced by 1</rule>
-		</gimmick>
-		<gimmick class="weakness">
-			<label>Panic</label>
-			<rule>for 3 AP the opposing team may perform a movement action with this model</rule>
-		</gimmick>
-		<gimmick class="weakness">
-			<label>Madness</label>
-			<rule>for 5 AP the opposing team may perform a melee action with this model</rule>
-		</gimmick>
-		<gimmick class="weakness">
-			<label>Crippled</label>
-			<rule>the model's BMR is reduced by 1</rule>
-			<rule>-1 on movement checks</rule>
-		</gimmick>
-		<gimmick class="powerup">
-			<label>Untiring</label>
-			<rule>this models first action of a turn cost no AP</rule>
-		</gimmick>
-		<gimmick class="weakness">
+		<gimmick power="-1">
 			<label>Wimpy</label>
 			<rule>-1 on recovery checks</rule>
 		</gimmick>
-		<gimmick class="weakness">
-			<label>Hesitant</label>
-			<rule>the models 1st action in a turn costs +1 AP</rule>
+		<gimmick power="-1">
+			<label>Panic</label>
+			<rule>for 4 AP the opposing team may perform a movement action with this model</rule>
 		</gimmick>
-		<gimmick class="weakness">
-			<label>Dumb</label>
-			<rule>may neither perform or react to complex actions</rule>
+		<gimmick power="-1">
+			<label>Madness</label>
+			<fluff>I'll never drop my guard towards this maniac, but it's still better to have her on OUR team... isn't it?</fluff>
+			<rule>for 4 AP the opposing team may perform a melee action with this model</rule>
 		</gimmick>
-		<!-- <gimmick class="weakness">
-			<label>Death Wish</label>
-			<rule>may not perform defensive melee reactions</rule>
-		</gimmick> -->
-		<gimmick class="powerup melee">
+		<gimmick power="-1">
+			<label>Trauma</label>
+			<fluff>Pretty scary to see such a seasoned fighter just drop sobbing in an emergency, eh? Well, nobody knows what he's been through, and to be honest: I think it's better that way...</fluff>
+			<rule>for 4 AP the opposing team may force the model to go down</rule>
+		</gimmick>
+		<gimmick power="1">
+			<label>Guardian</label>
+			<rule>may react on any opposing melee attack in its melee range by counter attack or defending the target</rule>
+		</gimmick>
+		<gimmick power="1">
+			<label>Pistolero</label>
+			<rule>may react to being shot at by shooting back</rule>
+		</gimmick>
+		<gimmick power="1">
 			<label>Frenzy</label>
-			<rule>after performing a successful melee attack the model may perform another melee attack for just 1 AP</rule>
+			<rule>after performing a successful melee attack the model may perform another melee attack for free</rule>
 		</gimmick>
-		<!-- <gimmick class="team">
-			<label>Concrete Soccer</label>
-			<rule>-1 on initative checks</rule>
-			<rule>+1 on defensive melee checks</rule>
-		</gimmick> -->
-		<!-- <gimmick class="team">
-			<label>Second Wind</label>
-			<rule>the team gains 2 AP for each member that recovers</rule>
-		</gimmick> -->
-		<gimmick class="team">
-			<label>Vengeance</label>
-			<rule>+1 on initiative checks for each member that is put out of action until the end of battle</rule>
+		<gimmick power="-1">
+			<label>Death Wish</label>
+			<rule>may not move away from melee</rule>
 		</gimmick>
-		<gimmick class="team">
-			<label>Reactive Tactics</label>
-			<rule>may choose to postpone its turn after that of another player gaining 1 AP for that round</rule>
-		</gimmick>
-		<gimmick class="outdated body">
-			<label>Elf</label>
-			<rule>+1 on ranged and movement checks. May not join another models initiative.</rule>
-		</gimmick>
-		<gimmick class="outdated body">
-			<label>Dog</label>
-			<rule>Has a BMR of 8.</rule>
-			<rule>-1 on melee checks</rule>
-		</gimmick>
-		<gimmick class="outdated body discuss-marker">
-			<label>Orc</label>
-			<rule>+1 on nondefensive melee checks</rule>
-			<rule>any action besides movement and melee takes 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated body discuss-marker">
-			<label>Ogre</label>
-			<rule>-1 on all checks. Ignores hits with a success value below 3. Puts smaller targets out of action on hit.</rule>
-		</gimmick>
-		<gimmick class="outdated body">
-			<label>Dwarf</label>
-			<rule>-1 to BMR</rule>
-			<rule>+1 on recover checks.</rule>
-		</gimmick>
-		<gimmick class="outdated team">
-			<label>Law enforcers</label>
-			<rule>May not strike first</rule>
-			<rule>Does not suffer  </rule>
-		</gimmick>
-		<gimmick class="outdated team">
-			<label>Outlaws</label>
-			<rule>May not spend riches. A 1 on the win table recruits a new team member even beyond its maximum size.</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Narcistic</label>
-			<cost>-1</cost>
-			<rule>May not join another models initiative.</rule>
-		</gimmick>
-		<gimmick class="outdated weakness melee">
+		<gimmick power="-1">
 			<label>Feeble</label>
-			<cost>-1</cost>
 			<rule>-1 to melee checks</rule>
 		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Blood Lust</label>
-			<cost>-1</cost>
-			<rule>May not perform defensive melee checks</rule>
+		<gimmick power="1">
+			<label>Dodger</label>
+			<rule>may react to being shot at by performing an interfering movement action</rule>
 		</gimmick>
-		<gimmick class="outdated weakness karma">
-			<label>Honor</label>
-			<cost>-1</cost>
-			<rule>May not support or be supported in melee attacks. May not shoot running models.</rule>
-		</gimmick>
-		<gimmick class="outdated powerup karma">
-			<label>Awe</label>
-			<cost>1</cost>
-			<rule>May not be attacked by multiple opponents</rule>
-		</gimmick>
-		<gimmick class="outdated powerup karma">
-			<label>Invulnerable</label>
-			<cost>1</cost>
-			<rule>Does not take damage except the success value of the hit is exactly 4.</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Short legs</label>
-			<cost>-1</cost>
-			<rule>-1 on movement checks</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Sloth</label>
-			<cost>-1</cost>
-			<rule>-1 on initiative checks</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Crippled</label>
-			<cost>-1</cost>
-			<rule>-1 on movement checks</rule>
-		</gimmick>
-		<gimmick class="outdated weakness karma">
-			<label>Usual suspect</label>
-			<cost>-1</cost>
-			<rule>Law enforcers +1 on checks attacking this model</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Field Medic</label>
-			<cost>1</cost>
-			<rule>May for 1 AP recover another model without doing a check or being hindered.</rule>
-		</gimmick>
-		<gimmick class="outdated powerup melee">
-			<label>Assassin</label>
-			<cost>1</cost>
-			<rule>Delays entry of battle field. As the acting model may enter the battle field by attacking any model on the field either ranged or melee.</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Courage</label>
-			<cost>1</cost>
-			<rule>+1 on interfering initiative checks</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Leadership</label>
-			<cost>1</cost>
-			<rule>+1 on leadership checks</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Unpopular</label>
-			<cost>-1</cost>
-			<rule>-1 on leadership checks</rule>
-		</gimmick>
-		<gimmick class="outdated powerup melee">
-			<label>Faint</label>
-			<cost>1</cost>
-			<rule>May redirect its action or reaction after all has been determined for 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated powerup discuss-marker">
-			<label>Willpower</label>
-			<cost>1</cost>
-			<rule>1 extra use for a 1 use gimmick</rule>
-		</gimmick>
-		<gimmick class="outdated powerup karma">
-			<label>Harmless</label>
-			<cost>1</cost>
-			<rule>May not be attacked until it attacks itself</rule>
-		</gimmick>
-		<gimmick class="outdated powerup discuss-marker">
-			<label>Poison</label>
-			<cost>1</cost>
-			<rule>The first target hit dies at the end of the battle</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Cold blooded</label>
-			<cost>1</cost>
-			<rule>+1 on attacks that are unhindered</rule>
-		</gimmick>
-		<gimmick class="outdated gear armour">
-			<label>Helmet</label>
-			<cost>0</cost>
-			<rule>May spend 2 AP to ignore a hit that would put the model out of action.</rule>
-		</gimmick>
-		<gimmick class="outdated powerup melee">
-			<label>Berserk</label>
-			<cost>1</cost>
-			<rule>May perform a melee attack between turns for 1 AP without being interfered or supported. May not interfere with any action in the following turn.</rule>
-		</gimmick>
-		<gimmick class="outdated powerup movement">
-			<label>Fleet of Foot</label>
-			<cost>1</cost>
-			<rule>May perform a movement action between turns for 1 AP without being reacted to or joined.</rule>
-		</gimmick>
-		<gimmick class="powerup movement">
+		<gimmick power="1">
 			<label>Evasive</label>
-			<rule>may react to being shot at by performing a movement action</rule>
+			<rule>may react to being attacked in melee by performing an interfering movement action</rule>
 		</gimmick>
-		<gimmick class="outdated powerup melee">
-			<label>Savage Blow</label>
-			<cost>1</cost>
-			<rule>Making the next melee hit fatal for 1 AP</rule>
+		<gimmick power="1">
+			<label>Fighting in the Shade</label>
+			<require>shield</require>
+			<rule>may react to being shot at with a melee check</rule>
 		</gimmick>
-		<card class="tactical">
-			<label>Sneak Attack</label>
-			<rule>redeploy any model that is not gone out of action and not in sight of the enemy anywhere on the battlefield on the beginning of the turn</rule>
-		</card>
-		<card class="tactical">
+		<gimmick power="1">
+			<label>Die Hard</label>
+			<rule>may react with recovery check when being targeted by an attack</rule>
+		</gimmick>
+		<gimmick power="1">
+			<label>Second Wind</label>
+			<rule>gain a free action after succesful recovery</rule>
+		</gimmick>
+		<gimmick power="-1">
+			<label>Sluggish</label>
+			<rule>the model's 1st action in a turn costs +1 AP</rule>
+		</gimmick>
+		<gimmick power="-1">
+			<label>Hesitant</label>
+			<rule>the model may only act when its team got the last turn</rule>
+		</gimmick>
+		<card>
 			<label>Trigger Happy</label>
-			<rule>one model may react to any action in sight by shooting</rule>
+			<trigger>play when an enemy action in sight of a model whith a ranged weapon is about to happen</trigger>
+			<rule>one model may react to the triggering action by shooting</rule>
 		</card>
-		<card class="tactical">
+		<card>
 			<label>Snap the Trap</label>
-			<rule>end the enemy's turn after performing a successful counter attack</rule>
+			<trigger>play on a successful counter attack</trigger>
+			<rule>end the enemy's turn</rule>
 		</card>
-		
-		<!--
-		<gimmick class="outdated powerup melee">
-			<label>Riposte</label>
-			<cost>1</cost>
-			<rule>+1 auf aggressive Nahkampfproben gegen angreifende Gegner ohne Riposte, verleiht Riposte</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Blutarm</label>
-			<cost>-1</cost>
-			<rule>-2 auf AP</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Schwache Schultern</label>
-			<cost>-1</cost>
-			<rule>erhält in Rüstung -1 auf alle Proben</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Kränklich</label>
-			<cost>-1</cost>
-			<rule>regeneriert AP nur in einem ordentlichen Bett mit genug Zeit</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Empfindlich</label>
-			<cost>-1</cost>
-			<rule>erlittener Schaden ist um 1 erhöht</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Arm</label>
-			<cost>-1</cost>
-			<rule>muss für Unterbringung und Verpflegung Reichtum aufbringen, ist sonst auf Almosen angewiesen</rule>
-		</gimmick>
-		<gimmick class="outdated gear">
-			<label>Spezialausrüstung</label>
-			<variant>Minenarbeiterwerkzeug</variant>
-			<variant>Bergsteigerausrüstung</variant>
-			<variant>Reiselabor</variant>
-			<rule>eröffnet Spieloptionen</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Aufmerksam</label>
-			<cost>1</cost>
-			<rule>+1 auf Wahrnehmungsproben</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Vital</label>
-			<cost>1</cost>
-			<rule>+2 auf AP</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Mutig</label>
-			<cost>1</cost>
-			<rule>Darf die Effekte von Furcht und Panik ignorieren für 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Überraschung</label>
-			<cost>1</cost>
-			<rule>Erhält in der ersten Kampfrunde +1 pro investiertem AP auf Initiativeproben</rule>
-		</gimmick><gimmick class="outdated gear">
-			<label>Foliant der Magie</label>
-			<rule>ermöglicht Zugang zu einer der Magieschulen</rule>
-		</gimmick>
-		<gimmick class="outdated weakness karma">
-			<label>Opfer</label>
-			<cost>-1</cost>
-			<rule>Kriminelle bestehlen oder überfallen sie / ihn immer als ersten</rule>
-		</gimmick>
-		<gimmick class="outdated powerup karma">
-			<label>Autorität</label>
-			<cost>1</cost>
-			<rule>Bei Verhandlungen mit mehreren Gegnern, können höchstens 2 in Konkurrenz treten</rule>
-		</gimmick>
-		<gimmick class="outdated gear">
-			<label>Insignie der Herrschaft</label>
-			<variant>Zepter</variant>
-			<variant>Banner</variant>
-			<variant>Wappenrock</variant>
-			<rule>+ 1 auf Verhandlungsproben wenn es um das Erteilen von Befehlen geht</rule>
-		</gimmick>
-		<gimmick class="outdated weakness karma">
-			<label>Grausam</label>
-			<cost>-1</cost>
-			<rule>Wenn darum gebeten, darf sie / er keine Gnade gewähren</rule>
-		</gimmick>
-		<gimmick class="outdated weakness karma">
-			<label>Treulos</label>
-			<cost>-1</cost>
-			<rule>Verlässt das Kampfgeschehen, sobald mindestens einem Gefährten die AP auf 0 sinken</rule>
-		</gimmick>
-		<gimmick class="outdated weakness karma">
-			<label>Heimsuchung</label>
-			<cost>-1</cost>
-			<rule>Gegner erhalten im Kampf Unterstützung durch eine Einbildung des Charakters, welche ihrerseits immer einen Würfel mit in die Konkurrenz wirft</rule>
-		</gimmick>
-		<gimmick class="outdated weakness karma">
-			<label>Gezeichnet</label>
-			<cost>-1</cost>
-			<rule>Andere verweigern die Kommunikation, sofern sie nicht einiges zusammen durchgemacht haben</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Schlachtwahn</label>
-			<cost>-1</cost>
-			<rule>Er / sie kann einen Kampf erst beenden, wenn er / sie 0 AP hat</rule>
-		</gimmick>
-		<gimmick class="outdated powerup karma">
-			<label>Schutz der Geister</label>
-			<cost>1</cost>
-			<rule>Gegner treten mit den Geistern in Konkurrenz (1 Wurf, unmodifiziert), sobald sie den Charakter angreifen</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Universalgelehrter</label>
-			<cost>1</cost>
-			<rule>+ 1 auf alle Wissensproben</rule>
-		</gimmick>
-		<gimmick class="outdated gear">
-			<label>Foliant des Wissens</label>
-			<rule>ermöglicht Zugang zu einem der Wissensgebiete</rule>
-		</gimmick>
-		<gimmick class="outdated gear magical">
-			<label>Talisman</label>
-			<rule>-1 auf Zauberproben gegen den Charakter</rule>
-		</gimmick>
-		<gimmick class="outdated gear clothing">
-			<label>Tarnumhang</label>
-			<rule>Schleichen und Verstecken +1</rule>
-		</gimmick>
-		<gimmick class="outdated gear weapon melee">
-			<label>Langschwert</label>
-			<rule>Nahkampfprobe +1, Schaden *2</rule>
-		</gimmick>
-		<gimmick class="outdated gear weapon melee">
-			<label>Speer</label>
-			<rule>Nahkampfreichweite + 1m, Schaden *2, 2händig, ermöglicht Fernkampfangriffe, Fernkampfprobe -1</rule>
-		</gimmick>
-		<gimmick class="outdated gear weapon melee">
-			<label>Bihänder</label>
-			<rule>Schaden *3, 2händig</rule>
-		</gimmick>
-		<gimmick class="outdated gear weapon melee">
-			<label>Streitaxt</label>
-			<rule>Schaden +5, 2händig</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Charme</label>
-			<cost>1</cost>
-			<rule>+1 auf Proben sozialer Interaktion</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Angst vor ...</label>
-			<cost>-1</cost>
-			<variant>Wasser</variant>
-			<variant>Feuer</variant>
-			<variant>Dunkelheit</variant>
-			<variant>Abgründen</variant>
-			<rule>-2 auf Proben, die in- oder in unmittelbarer Nähe des Angstobjekts durchgeführt werden</rule>
-		</gimmick>
-		<gimmick class="outdated gear weapon ranged">
-			<label>Langbogen</label>
-			<rule>ermöglicht Fernkampfangriffe, Schaden *2, 2händig</rule>
-		</gimmick>
-		<gimmick class="outdated gear weapon ranged">
-			<label>Armbrust</label>
-			<rule>ermöglicht Fernkampfangriffe, Schaden +4, 2händig</rule>
-		</gimmick>
-		<gimmick class="outdated gear economical">
-			<label>Reichtum</label>
-			<variant>Edelsteine</variant>
-			<variant>Schmuck</variant>
-			<variant>Check</variant>
-			<variant>Währung</variant>
-			<rule>eröffnet Spieloptionen</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>En Garde!</label>
-			<cost>1</cost>
-			<rule>zieht Aktionsfrei die Waffe / Waffen für 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated powerup magical">
-			<label>Fokussieren</label>
-			<cost>1</cost>
-			<rule>+1 auf eine Zauberprobe für 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated powerup melee">
-			<label>Vorstoß</label>
-			<cost>1</cost>
-			<rule>+1 auf ein Nahkampfprobe für 1 AP, wenn man jemanden angreift</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Kraftakt</label>
-			<cost>1</cost>
-			<rule>+1 auf eine Stärkeprobe für 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Stark</label>
-			<cost>1</cost>
-			<rule>+1 auf alle Stärkeproben</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Robust</label>
-			<cost>1</cost>
-			<rule>+3 natürliche Rüstung</rule>
-		</gimmick>
-		<gimmick class="outdated powerup magical">
-			<label>Magieschule(...)</label>
-			<cost>1</cost>
-			<rule>ermöglicht das Wirken von Zaubern einer bestimmten Magieschule (siehe Magie)</rule>
-		</gimmick>
-		<gimmick class="outdated powerup melee">
-			<label>Mehrfachangriff</label>
-			<cost>1</cost>
-			<rule>Nahkampfangriff auf mehrere Ziele für je 1 AP. Als Qualität gilt für alle Ziele die niedrigste Differenz</rule>
-		</gimmick>
-		<gimmick class="outdated powerup ranged">
-			<label>Schnellschuss</label>
-			<cost>1</cost>
-			<rule>Fernkampfangriff ohne Einmischung für für 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated powerup armour">
-			<label>Rüstträger</label>
-			<cost>1</cost>
-			<rule>kann den Bewegungsmalus schwerer Rüstung ignorieren</rule>
-		</gimmick>
-		<gimmick class="outdated powerup armour">
-			<label>Gut verpackt</label>
-			<cost>1</cost>
-			<rule>Erhöht die Rüstung pro getragenem Rüstungsteil um 1</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Schmerzfrei</label>
-			<cost>1</cost>
-			<rule>kann Handlung trotz erlittenen Schadens ausführen für 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Sprinten</label>
-			<cost>1</cost>
-			<rule>Bewegungsweite *2 für eine Bewegung für 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated powerup ranged">
-			<label>Schütze</label>
-			<cost>1</cost>
-			<rule>+1 auf eine Fernkampfprobe für 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated powerup ranged">
-			<label>Meisterschütze</label>
-			<cost>1</cost>
-			<rule>+1 auf Fernkampfproben</rule>
-		</gimmick>
-		<gimmick class="outdated powerup movement">
-			<label>Leichtfüßig</label>
-			<cost>1</cost>
-			<rule>+1 auf Bewegungsproben</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Blitzgeschwind</label>
-			<cost>1</cost>
-			<rule>Kann für 1 AP in einer Runde eine weitere Aktion ausführen</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Handwerker</label>
-			<cost>1</cost>
-			<rule>kann Rüstungen ohne Punktverlust reparieren</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Handwerksmeister</label>
-			<cost>1</cost>
-			<rule>kann kann unter Aufwenden von Reichtum Rüstungen mit Rüstungswert + 1 herstellen</rule>
-		</gimmick>
-		<gimmick class="outdated powerup melee">
-			<label>Strumangriff</label>
-			<cost>1</cost>
-			<rule>Nahkampfangriff mit vorangehenden 4 Metern Bewegung für 1 AP</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Unermüdlich</label>
-			<cost>1</cost>
-			<rule>regeneriert 1 AP sobald die AP durch eine Aktion auf 0 sinken</rule>
-		</gimmick>
-		<gimmick class="outdated powerup melee">
-			<label>Verteidigen</label>
-			<cost>1</cost>
-			<rule>+1 auf Nahkampfproben, wenn man niemanden Angreift</rule>
-		</gimmick>
-		<gimmick class="outdated powerup ranged melee">
-			<label>Werfer</label>
-			<cost>1</cost>
-			<rule>ermöglicht Fernkampfangriffe mit Nahkampfwaffen, Fernkampfprobe -2</rule>
-		</gimmick>
-		<gimmick class="outdated powerup melee">
-			<label>Wächter</label>
-			<cost>1</cost>
-			<rule>benötigt Schild, ermöglicht Einmischung durch defensive Aktionen in Angriffe auf andere, auch wenn bereits aktiv gewesen</rule>
-		</gimmick>
-		<gimmick class="outdated weakness">
-			<label>Grob</label>
-			<cost>-1</cost>
-			<rule>-1 auf Proben sozialer Interaktion, Ausnahme Einschüchtern</rule>
-		</gimmick>
-		<gimmick class="outdated powerup">
-			<label>Wissen</label>
-			<cost>1</cost>
-			<variant>Geschichte</variant>
-			<variant>Geographie</variant>
-			<variant>Biologie</variant>
-			<variant>Kultur</variant>
-			<variant>Magie</variant>
-			<rule>gibt +1 bei Proben auf ein bestimmtes Wissensgebiet</rule>
-		</gimmick>
-		<gimmick class="outdated powerup magical">
-			<label>Zaubern(...)</label>
-			<cost>1</cost>
-			<rule>gibt +1 auf Zauberproben einer bestimmten Magieschule</rule>
-		</gimmick>
-	-->
+		<card>
+			<label>Feint Death</label>
+			<trigger>play at the beginning of a turn</trigger>
+			<rule>reanimate a model to full health at anywhere on the battlefield and perform one action with that model</rule>
+			<rule>skip the rest of the turn</rule>
+		</card>
+		<card>
+			<label>Rush</label>
+			<trigger>play on your first turn of the game</trigger>
+			<rule>perform 1 free movement action for every model on the team</rule>
+		</card>
+		<card>
+			<label>Vengeance</label>
+			<trigger>play at any time during your turn</trigger>
+			<rule>instantly gain AP equal to the number of team members gone out of action</rule>
+		</card>
+		<card>
+			<label>Carnage</label>
+			<trigger>play at any time during your turn</trigger>
+			<rule>perform a free melee attack with every team member in melee range to an enemy model</rule>
+		</card>
+		<card>
+			<label>Raise the Pressure</label>
+			<trigger>play after rolling AP checks</trigger>
+			<rule>reduce every team's AP pool by 2</rule>
+		</card>
+		<card class="techno-magic">
+			<label>Energy Shield</label>
+			<require>Techno/Mage</require>
+			<trigger>play at any time during your turn</trigger>
+			<rule>generating a shield that absorbs any hit until the end of the round for the activating model and every team mate in melee range</rule>
+		</card>
+		<card class="techno-magic">
+			<label>Lightning Strike</label>
+			<require>Techno/Mage</require>
+			<trigger>play at any time during your turn</trigger>
+			<rule>an enemy model in sight is struck by a lightning! it goes out of action immediately unless it succeeds a check with its own PL as difficulty</rule>
+		</card>
+		<card class="techno-magic">
+			<label>Wall of Flame</label>
+			<require>Techno/Mage</require>
+			<trigger>play at any time during your turn</trigger>
+			<rule>creates a wall of flames up to a width of 6 inches in any unoccupied space on the battle field for the rest of the battle which attacks any one who tries to pass through with +1</rule>
+		</card>
+		<card class="leadership">
+			<label>Regroup!</label>
+			<require>Leader</require>
+			<trigger>play at the end of your turn</trigger>
+			<rule>redeploy any number of models in melee into base contact around the leader model</rule>
+		</card>
+		<card class="leadership">
+			<label>Strike as One!</label>
+			<require>Leader</require>
+			<trigger>play before performing a melee action with a leader model</trigger>
+			<rule>applies +1 to a melee action of the leader model and any subsequent melee action of team members during that turn</rule>
+		</card>
+		<card class="leadership">
+			<label>Join Me!</label>
+			<require>Leader</require>
+			<trigger>play at any time during your turn</trigger>
+			<rule>provides "Mob Move" to all models on the team during movement actions of the leader model for one turn</rule>
+		</card>
+		<card class="covered-ops">
+			<label>Sneak Attack</label>
+			<require>Covered Ops Specialist</require>
+			<trigger>play at the beginning of your turn</trigger>
+			<rule>redeploy any model that is not gone out of action and not in sight of the enemy anywhere on the battlefield</rule>
+		</card>
+		<card class="covered-ops">
+			<label>Escape Plan</label>
+			<require>Covered Ops Specialist</require>
+			<trigger>play at the end of your turn</trigger>
+			<rule>redeploy any model that is not gone down and within enemy melee range to a spot where it may not be seen by the enemy</rule>
+		</card>
+		<card class="covered-ops">
+			<label>Missinformation</label>
+			<require>Covered Ops Specialist</require>
+			<trigger>play after AP checks</trigger>
+			<rule>move one demolition or loot target up to 6 inches in any direction</rule>
+		</card>
+		<card class="leadership">
+			<label>Plot Armour</label>
+			<require>Leader</require>
+			<require>Leader, Covered Ops Specialist or Techno/Mage on opposing team</require>
+			<trigger>play at the beginning of the match</trigger>
+			<rule>your leader can only go out of action by attacks from Leaders, Covered Ops Specialists or Techno/Mages</rule>
+		</card>
 	</body>
 </html>

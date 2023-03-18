@@ -62,9 +62,10 @@ gimmick {
   border: 1px solid;
   border-radius: 0.5em;
   box-sizing: border-box;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+  background: linear-gradient(0deg, rgba(111, 149, 19, 0.15), rgba(111, 149, 19, 0));
 }
 gimmick:before {
+  content: url("../img/neutral-trait-tile.svg");
   margin-left: -40px;
   margin-bottom: -32px;
   display: block;
@@ -73,36 +74,19 @@ gimmick label {
   display: block;
   font-size: 1.5em;
 }
-gimmick.gear {
-  background: linear-gradient(0deg, rgba(98, 78, 83, 0.15), rgba(98, 78, 83, 0));
-}
-gimmick.gear:before {
-  content: url("../img/gear.png");
-}
-gimmick.weakness {
+gimmick[power="-1"] {
   background: linear-gradient(0deg, rgba(84, 125, 163, 0.15), rgba(84, 125, 163, 0));
 }
-gimmick.weakness:before {
+gimmick[power="-1"]:before {
   content: url("../img/weakness-tile.svg");
 }
-gimmick.powerup {
+gimmick[power="1"] {
   background: linear-gradient(0deg, rgba(175, 134, 9, 0.15), rgba(175, 134, 9, 0));
 }
-gimmick.powerup:before {
+gimmick[power="1"]:before {
   content: url("../img/powerup-tile.svg");
 }
-gimmick.team {
-  background: linear-gradient(0deg, rgba(111, 149, 19, 0.15), rgba(111, 149, 19, 0));
-}
-gimmick.team:before {
-  content: url("../img/team.png");
-}
-gimmick.shape, gimmick.trait {
-  background: linear-gradient(0deg, rgba(149, 66, 55, 0.15), rgba(149, 66, 55, 0));
-}
-gimmick.shape:before, gimmick.trait:before {
-  content: url("../img/shape.png");
-}
+
 @media print {
   gimmick {
     border-color: #999;
@@ -121,6 +105,7 @@ card {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
 }
 card:before {
+  content: url("../img/card-tactical.svg");
   margin-left: -40px;
   margin-bottom: -32px;
   display: block;
@@ -134,6 +119,24 @@ card.tactical {
 }
 card.tactical:before {
   content: url("../img/card-tactical.svg");
+}
+card.covered-ops {
+  background: linear-gradient(0deg, rgba(84, 147, 163, 0.15), rgba(84, 147, 163, 0));
+}
+card.covered-ops:before {
+  content: url("../img/card-covered-ops.svg");
+}
+card.techno-magic {
+  background: linear-gradient(0deg, rgba(147, 84, 163, 0.15), rgba(147, 84, 163, 0));
+}
+card.techno-magic:before {
+  content: url("../img/card-techno-magic.svg");
+}
+card.leadership {
+  background: linear-gradient(0deg, rgba(147, 84, 163, 0.15), rgba(147, 84, 163, 0));
+}
+card.leadership:before {
+  content: url("../img/card-leadership.svg");
 }
 
 @media print {
@@ -161,6 +164,30 @@ variant:nth-last-of-type(2):after {
 }
 variant:nth-of-type(1):before {
   content: "e.g. ";
+}
+
+problem {
+  display: block;
+  border-radius: 4px;
+  padding: 4px;
+  color: #aa3333;
+  background-color: #ea9;
+}
+
+problem::before {
+  display: inline-block;
+  height: 15px;
+  width:15px;
+  line-height: 15px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  content: "!";
+  background-color: #944;
+  color: #fff;
+  margin-right: 6px;
+  vertical-align: top;
 }
 
 fluff {

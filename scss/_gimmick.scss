@@ -10,9 +10,10 @@ gimmick{
 	border: 1px solid;
 	border-radius: 0.5em;
 	box-sizing: border-box;
-	background: linear-gradient( 0deg , rgba( 0 , 0 , 0 , 0.15 ) , rgba( 0 , 0 , 0 , 0.0 ) );
+	background: linear-gradient( 0deg , rgba( 111 , 149 , 19 , 0.15 ) , rgba( 111 , 149 , 19 , 0.0 ) );
 
 	&:before{
+		content: url("../img/neutral-trait-tile.svg");
 		margin-left: -40px;
 		margin-bottom: -32px;
 		display: block;
@@ -27,45 +28,18 @@ gimmick{
 		@extend %block;
 	}
 
-	&.gear{
-		background: linear-gradient( 0deg , rgba( 98 , 78 , 83 , 0.15 ) , rgba( 98 , 78 , 83 , 0.0 ) );
-		&:before{
-			content: url("../img/gear.png");
-		}
-	}
-
-	&.weakness{
+	&[power="-1"]{
 		background: linear-gradient( 0deg , rgba( 84 , 125 , 163 , 0.15 ) , rgba( 84 , 125 , 163 , 0.0 ) );
 		&:before{
-			//content: url("../img/weakness.png");
 			content: url("../img/weakness-tile.svg");
 		}
 	}
 
-	&.powerup{
+	&[power="1"]{
 		background: linear-gradient( 0deg , rgba( 175 , 134 , 9 , 0.15 ) , rgba( 175 , 134 , 9 , 0.0 ) );
 		&:before{
-			//content: url("../img/powerup.png");
 			content: url("../img/powerup-tile.svg");
 		}
-	}
-
-	&.team{
-		background: linear-gradient( 0deg , rgba( 111 , 149 , 19 , 0.15 ) , rgba( 111 , 149 , 19 , 0.0 ) );
-		&:before{
-			content: url("../img/team.png");
-		}
-	}
-
-	&.shape{
-		background: linear-gradient( 0deg , rgba( 149 , 66 , 55 , 0.15 ) , rgba( 149 , 66 , 55 , 0.0 ) );
-		&:before{
-			content: url("../img/shape.png");
-		}
-	}
-
-	&.trait{
-		@extend .shape;
 	}
 }
 
