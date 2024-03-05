@@ -59,9 +59,11 @@
 			<rule>the weapon inflicts heavy hits</rule>
 		</gimmick>
 		<gimmick power="1" tier="0">
-			<label>Grenadier</label>
+			<label>Hurled Explosions</label>
+			<variant>granades</variant>
+			<variant>fire ball</variant>
 			<require>cards</require>
-			<rule>may discard one card to throw a granade: the granade explodes 1/2 d6 inch away in a random direction from the designated destination. It hits every model in a 2 inch radius and puts every model down 2 inches further.</rule>
+			<rule>may discard one card to apply an explosive projectile: the projectile explodes 1/2 d6 inch away in a random direction from the designated destination. It hits every model in a 2 inch radius and puts every model down 2 inches further.</rule>
 		</gimmick>
 		<gimmick power="1" tier="0">
 			<label>Sniper Scope</label>
@@ -77,6 +79,7 @@
 		<gimmick power="-1">
 			<label>Hanger-On</label>
 			<rule>-1 on all checks while no other team member is in melee range</rule>
+			<problem>quite similar to Helpless</problem>
 		</gimmick>
 		<gimmick power="-1">
 			<label>Morale Bottleneck</label>
@@ -98,6 +101,7 @@
 			<label>Helpless</label>
 			<variant>C3PO</variant>
 			<rule>may not move unless it would reach base contact with a friendly model</rule>
+			<problem>quite similar to Hanger-On</problem>
 		</gimmick>
 		<gimmick power="-1">
 			<label>Impatient</label>
@@ -130,6 +134,7 @@
 			<label>Lucky Charm</label>
 			<require>cards</require>
 			<rule>may ignore any hit that puts the model out of action for discarding one card</rule>
+			<problem>too predictable for my taste, maybe make a card?</problem>
 		</gimmick>
 		<gimmick power="-1" tier="0">
 			<label>Mind Damage</label>
@@ -179,28 +184,53 @@
 			<require>ranged weapon</require>
 			<rule>difficulty for cover and prone is not applied</rule>
 		</gimmick>
+		<!--<gimmick power="1" tier="0">
+			<label>Side Arm</label>
+			<variant>pistol on belt</variant>
+			<require>weapon attached to the model but not in hand</require>
+			<rule>for an additional AP the weapon in question may be considered "in hand" for one action or reaction</rule>
+			<problem>I am not sure whether this powerup pays of adequately. It might be a basic feature, but then again, it lacks disadvatage.</problem>
+		</gimmick>-->
+		<gimmick power="1" tier="0">
+			<label>Leap Maneuvering</label>
+			<variant>jet pack</variant>
+			<variant>wings</variant>
+			<variant>frog jump</variant>
+			<variant>short range teleport</variant>
+			<rule>may move up to 12 inches ignoring obstacles, interference or hight for 1 aditional AP</rule>
+			<problem>this seems op, maybe use cards?</problem>
+			<rule>-1 on survival checks</rule>
+		</gimmick>
+		<gimmick power="1" tier="0">
+			<label>Airborne</label>
+			<variant>wings</variant>
+			<variant>antigrav</variant>
+			<rule>ignores obstacles, melee interference and hights when moving</rule>
+			<rule>may not be attacked with melee unless it is already in melee or gone down</rule>
+			<rule>recovery checks cost an additional AP</rule>
+		</gimmick>
 		<gimmick power="1" tier="0">
 			<label>Area Damage</label>
 			<variant>flame thrower</variant>
 			<variant>machine gun</variant>
-			<require>ranged weapon</require>
-			<rule>hits all models in melee range of the targeted model at the cost of 1 aditional AP</rule>
-		</gimmick>
-		<gimmick power="1" tier="0">
-			<label>Slashing Strike</label>
-			<variant>two-handed sword</variant>
-			<variant>flail</variant>
-			<rule>may attack two adjacent enemy models in melee range with one attack for 1 additional AP</rule>
-			<problem>This is pretty much the same as Area Damage...</problem>
+			<variant>two handed sword</variant>
+			<variant>troll fart</variant>
+			<rule>hits all models in melee range of the targeted model except one self at the cost of 1 aditional AP</rule>
 		</gimmick>
 		<gimmick power="-1">
 			<label>Cursed</label>
 			<rule>reroutes hits on any model in melee range to itself</rule>
+			<problem>this seems op</problem>
 		</gimmick>
 		<gimmick power="1">
 			<label>Role Model</label>
 			<rule>duplicates all gimmicks except this one to another model with the same outfit overriding the target model's gimmicks</rule>
 			<problem>i really am not sure about this</problem>
+		</gimmick>
+		<gimmick power="1">
+			<label>Juggler</label>
+			<require>melee side arm</require>
+			<rule>applies its melee side arm without the cost of an extra AP</rule>
 		</gimmick>
 		<gimmick power="1">
 			<label>Cruel</label>
@@ -232,7 +262,8 @@
 		<gimmick power="-1" tier="0">
 			<label>Dumb</label>
 			<rule>may neither perform or react to complex actions</rule>
-			<rule>may not activate any cards</rule>
+			<!--<rule>may not gain gimmicks through progress check</rule>-->
+			<rule>may not use Covered Ops Specialist, Leader or Techno/Mage gimmick</rule>
 			<problem>One rule refers to cards, the other does not. So does this gimmick require cards or not?</problem>
 		</gimmick>
 		<gimmick power="1">
@@ -323,6 +354,10 @@
 			<label>Hesitant</label>
 			<rule>the model may only act when its team got the last turn</rule>
 		</gimmick>
+		<gimmick power="-1">
+			<label>Straggler</label>
+			<rule>the model joins the battlefield 4 Rounds late at a regular start position</rule>
+		</gimmick>
 		<card>
 			<label>Trigger Happy</label>
 			<trigger>play when an enemy action in sight of a model whith a ranged weapon is about to happen</trigger>
@@ -336,7 +371,7 @@
 		<card>
 			<label>Feint Death</label>
 			<trigger>play at the beginning of a turn</trigger>
-			<rule>reanimate a model to full health at anywhere on the battlefield and perform one action with that model</rule>
+			<rule>reanimate a model to full health anywhere on the battlefield and perform one action with that model</rule>
 			<rule>skip the rest of the turn</rule>
 		</card>
 		<card>
@@ -359,11 +394,23 @@
 			<trigger>play after rolling AP checks</trigger>
 			<rule>reduce every team's AP pool by 2</rule>
 		</card>
+		<card>
+			<label>Mercy of Fait</label>
+			<trigger>play after a model is put out of action</trigger>
+			<rule>put the model in question back into the game and on its feet</rule>
+			<problem>quite similar to lucky charm</problem>
+		</card>
 		<card class="techno-magic">
 			<label>Energy Shield</label>
 			<require>Techno/Mage</require>
 			<trigger>play at any time during your turn</trigger>
 			<rule>generating a shield that absorbs any hit until the end of the round for the activating model and every team mate in melee range</rule>
+		</card>
+		<card class="techno-magic">
+			<label>Earth Quake</label>
+			<require>Techno/Mage</require>
+			<trigger>play at any time during your turn</trigger>
+			<rule>every model is hit by an attack check -1</rule>
 		</card>
 		<card class="techno-magic">
 			<label>Lightning Strike</label>
@@ -412,6 +459,12 @@
 			<require>Covered Ops Specialist</require>
 			<trigger>play after AP checks</trigger>
 			<rule>move one demolition or loot target up to 6 inches in any direction</rule>
+		</card>
+		<card class="covered-ops">
+			<label>Poison</label>
+			<require>Covered Ops Specialist</require>
+			<trigger>play at the end of a turn</trigger>
+			<rule>put one model that is gone down out of action</rule>
 		</card>
 		<card class="leadership">
 			<label>Plot Armour</label>
