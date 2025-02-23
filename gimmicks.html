@@ -17,19 +17,29 @@
 			<rule>may destroy obstacles instead of overcomming them during movement</rule>
 		</gimmick>
 		<gimmick power="1" tier="0">
-			<label>Heavily Armoured</label>
+			<label>Unwavering</label>
 			<variant>WH40K Terminator armour</variant>
-			<rule>protection level is 5</rule>
+			<variant>brutish muscles</variant>
+			<rule>+1 protection level</rule>
 			<rule>-1 on recovery checks</rule>
 		</gimmick>
 		<gimmick power="1" tier="0">
-			<label>Special Protection</label>
+			<label>Bound for Agony</label>
 			<variant>plate armour</variant>
+			<variant>rubber bones</variant>
+			<variant>a stubborn attitude towards suffering</variant>
 			<rule>incomming heavy hits are dealt with like they are regular hits</rule>
+			<problem>is this really a tier 0 gimmick?</problem>
 		</gimmick>
 		<gimmick power="1">
 			<label>Mob Move</label>
-			<rule>the model may join any friendly model's movement action that begins in or passes through base contact without spending AP or exausting its maximum action count for that turn</rule>
+			<rule>the model may join any friendly model's movement action that begins in or passes through base contact without spending AP or counting as an action</rule>
+		</gimmick>
+		<gimmick power="-1" tier="0">
+			<label>Bound to Ground</label>
+			<variant>horse</variant>
+			<variant>drone on wheels</variant>
+			<rule>can not climb</rule>
 		</gimmick>
 		<gimmick power="1">
 			<label>Leader</label>
@@ -57,12 +67,16 @@
 		</gimmick>
 		<gimmick power="1" tier="0">
 			<label>Extra Punch</label>
-			<variant>sniper rifle</variant>
-			<variant>crossbow</variant>
 			<variant>light saber</variant>
 			<variant>the magical sword of whatnot</variant>
 			<variant>grand fathers troll slayer axe</variant>
-			<rule>the weapon inflicts heavy hits</rule>
+			<rule>melee attacks inflict heavy hits</rule>
+		</gimmick>
+		<gimmick power="1" tier="0">
+			<label>Devastating Projectiles</label>
+			<variant>sniper rifle</variant>
+			<variant>crossbow</variant>
+			<rule>ranged attacks inflict heavy hits</rule>
 		</gimmick>
 		<gimmick power="1" tier="0">
 			<label>Hurled Explosions</label>
@@ -73,9 +87,10 @@
 			<problem>does the range need to be limited?</problem>
 		</gimmick>
 		<gimmick power="1" tier="0">
-			<label>Sniper Scope</label>
+			<label>Long Range Targeting</label>
+			<variant>sniper rifle</variant>
 			<require>ranged weapon</require>
-			<rule>may spend additional AP to gain +1 each on a ranged check for an attack over at least 9 inch distance</rule>
+			<rule>may spend additional APs to gain +1 each on a ranged check for an attack over at least 12 inch distance</rule>
 		</gimmick>
 		<gimmick power="1">
 			<label>Savage Attack</label>
@@ -83,11 +98,11 @@
 			<variant>aiming for the weak spot</variant>
 			<rule>may perform an attack for +1 AP that inflicts heavy damage</rule>
 		</gimmick>
-		<gimmick power="-1">
+		<!-- <gimmick power="-1">
 			<label>Hanger-On</label>
 			<rule>-1 on all checks while no other team member is in melee range</rule>
 			<problem>quite similar to Helpless</problem>
-		</gimmick>
+		</gimmick> -->
 		<gimmick power="-1">
 			<label>Morale Bottleneck</label>
 			<rule>when receiving damage the team loses 1 AP</rule>
@@ -108,7 +123,7 @@
 			<label>Helpless</label>
 			<variant>C3PO</variant>
 			<rule>may not move unless it would reach base contact with a friendly model</rule>
-			<problem>quite similar to Hanger-On</problem>
+			<!-- <problem>quite similar to Hanger-On</problem> -->
 		</gimmick>
 		<gimmick power="-1">
 			<label>Impatient</label>
@@ -123,7 +138,7 @@
 			<variant>machine gun + ammo</variant>
 			<variant>full plate</variant>
 			<variant>two-handed battle axe</variant>
-			<rule>the movement range is reduced by 1</rule>
+			<rule>the movement range is reduced by 2</rule>
 		</gimmick>
 		<gimmick power="-1">
 			<label>Crippled</label>
@@ -131,7 +146,7 @@
 		</gimmick>
 		<gimmick power="1" tier="0">
 			<label>Fleet of Foot</label>
-			<rule>the movement range is increased by 1</rule>
+			<rule>the movement range is increased by 2</rule>
 		</gimmick>
 		<gimmick power="1">
 			<label>Sprinter</label>
@@ -149,12 +164,12 @@
 			<rule>may react to any action in sight by shooting for discarding one card</rule>
 			<!--<problem>has so far been a card which might be replaced by this gimmick</problem>-->
 		</gimmick>
-		<gimmick power="-1" tier="0">
+		<gimmick power="1" tier="0">
 			<label>Mind Damage</label>
 			<variant>spirit touch</variant>
 			<variant>seductive chant</variant>
 			<variant>psycho gas</variant>
-			<rule>instead of causing damage the targeted team loses 1 AP</rule>
+			<rule>the model may perform a ranged attack against a protection level of 3 causing no damage but draining 1 AP of the hit model's team</rule>
 		</gimmick>
 		<gimmick power="-1" tier="0">
 			<label>Immovable</label>
@@ -166,7 +181,7 @@
 		<gimmick power="1" tier="0">
 			<label>Mind Control</label>
 			<require>Mind Damage</require>
-			<rule>when hitting a model whose team has no AP left the player may take control of that model for one free action</rule>
+			<rule>when hitting a model with mind damage whose team has no AP left the player may take control of that model for one free action</rule>
 			<problem>In combination with the order of turns this might be a broken construct</problem>
 		</gimmick>
 		<gimmick power="1">
@@ -185,7 +200,7 @@
 		</gimmick>
 		<gimmick power="-1">
 			<label>Frail</label>
-			<rule>any successful incomming hit will cause the model to go out of action</rule>
+			<rule>any incomming hit will cause the model to go out of action</rule>
 		</gimmick>
 		<gimmick power="-1">
 			<label>Vulnerable</label>
@@ -206,47 +221,48 @@
 			<problem>I am not sure whether this powerup pays of adequately. It might be a basic feature, but then again, it lacks disadvatage.</problem>
 		</gimmick>-->
 		<gimmick power="1" tier="0">
-			<label>Leap Maneuvering</label>
-			<variant>jet pack</variant>
-			<variant>wings</variant>
-			<variant>frog jump</variant>
-			<variant>short range teleport</variant>
-			<rule>may move up to 12 inches ignoring obstacles, interference or hight for 1 aditional AP</rule>
-			<problem>this seems op, maybe use cards?</problem>
-			<rule>-1 on survival checks</rule>
-		</gimmick>
-		<gimmick power="1" tier="0">
 			<label>Airborne</label>
 			<variant>wings</variant>
 			<variant>antigrav</variant>
-			<rule>ignores obstacles, melee interference and hights when moving</rule>
-			<rule>may not be attacked with melee unless it is already in melee or gone down</rule>
-			<rule>recovery checks cost an additional AP</rule>
+			<variant>jet pack</variant>
+			<rule>ignores obstacles, hights, hempering ground conditions and other models when moving</rule>
 		</gimmick>
 		<gimmick power="1" tier="0">
-			<label>Area Damage</label>
-			<variant>flame thrower</variant>
-			<variant>machine gun</variant>
+			<label>Melee Area Damage</label>
 			<variant>two handed sword</variant>
 			<variant>troll fart</variant>
-			<rule>hits all models in melee range of the targeted model except one self at the cost of 1 aditional AP</rule>
+			<rule>all models in melee range may be attacked at once for the cost of an additional AP</rule>
+		</gimmick>
+		<gimmick power="1" tier="0">
+			<label>Ranged Area Damage</label>
+			<variant>flame thrower</variant>
+			<variant>machine gun</variant>
+			<variant>granade launcher</variant>
+			<rule>ranged attacks do not target a single model but all models in the target area with a radius of 3 inches</rule>
+			<rule>the target area scatters</rule>
+			<problem>is this to weak?</problem>
+		</gimmick>
+		<gimmick power="1" tier="0">
+			<label>Concussive Impact</label>
+			<variant>granade launcher</variant>
+			<rule>all models attacked by a ranged attack scatter (whether hit or not)</rule>
 		</gimmick>
 		<gimmick power="1" tier="0">
 			<label>Concussive Blows</label>
 			<variant>sledge hammer</variant>
-			<rule>a model hit in melee scatters.</rule>
-			<problem>is this an advantage?</problem>
+			<rule>all models attacked by a melee attack scatter (whether hit or not)</rule>
 		</gimmick>
 		<gimmick power="-1">
 			<label>Cursed</label>
 			<rule>failed attacks (except its own attacks) on any model in melee range are rerouted to this model and rerolled</rule>
+			<rule>failed ranged attacks (except its own attacks) on any model it shares the attackers line of sight with are rerouted to this model and rerolled</rule>
 			<problem>After reducing the effect of the first variant: Does this have any effect at all? It has to be tested!</problem>
 		</gimmick>
-		<gimmick power="1">
+		<!-- <gimmick power="1">
 			<label>Role Model</label>
 			<rule>duplicates all gimmicks except this one to another model with the same outfit overriding the target model's gimmicks</rule>
 			<problem>i really am not sure about this</problem>
-		</gimmick>
+		</gimmick> -->
 		<gimmick power="1">
 			<label>Juggler</label>
 			<require>melee side arm</require>
@@ -276,9 +292,17 @@
 		<gimmick power="-1" tier="0">
 			<label>Limited Range</label>
 			<variant>flame thrower</variant>
-			<variant>Whip</variant>
+			<variant>whip</variant>
 			<require>ranged weapon</require>
 			<rule>may only target models within 6 inch range</rule>
+		</gimmick>
+		<gimmick power="1" tier="0">
+			<label>Ballistic Targeting</label>
+			<variant>granade launcher</variant>
+			<require>ranged weapon</require>
+			<rule>ranged attacks do not need line of sight</rule>
+			<rule>-1 on ranged checks</rule>
+			<rule>no malus for obscured sight or prone target applies</rule>
 		</gimmick>
 		<gimmick power="1">
 			<label>Libero</label>
@@ -286,10 +310,8 @@
 		</gimmick>
 		<gimmick power="-1" tier="0">
 			<label>Dumb</label>
-			<rule>may neither perform or react to complex actions</rule>
-			<!--<rule>may not gain gimmicks through progress check</rule>-->
-			<rule>may not use Covered Ops Specialist, Leader or Techno/Mage gimmick</rule>
-			<problem>One rule refers to cards, the other does not. So does this gimmick require cards or not?</problem>
+			<rule>may not perform complex actions</rule>
+			<rule>presence does not block complex actions</rule>
 		</gimmick>
 		<gimmick power="1">
 			<label>Motivated</label>
@@ -306,7 +328,7 @@
 		</gimmick>
 		<gimmick power="1">
 			<label>Athlete</label>
-			<rule>may overcome one additional obstacle during movement</rule>
+			<rule>may overcome obstacles without limit during movement</rule>
 			<rule>climbing only costs 1 AP</rule>
 		</gimmick>
 		<gimmick power="1">
@@ -327,7 +349,7 @@
 			<rule>for 4 AP the opposing team may perform a melee action with this model</rule>
 		</gimmick>
 		<gimmick power="-1">
-			<label>Trauma</label>
+			<label>Mental Trauma</label>
 			<fluff>Pretty scary to see such a seasoned fighter just drop sobbing in an emergency, eh? Well, nobody knows what he's been through, and to be honest: I think it's better that way...</fluff>
 			<rule>for 4 AP the opposing team may force the model to go down</rule>
 		</gimmick>
@@ -389,6 +411,12 @@
 			<require>cards</require>
 			<rule>with this model on the team, the player may draw 1 card less</rule>
 		</gimmick>
+		<gimmick power="1" tier="0">
+			<label>Minion</label>
+			<require>campaign mode</require>
+			<rule>may redeploy at spawn position on recovery</rule>
+			<rule>does not roll for progress or survival</rule>
+		</gimmick>
 		<!--<card>
 			<label>Trigger Happy</label>
 			<trigger>play when an enemy action in sight of a model whith a ranged weapon is about to happen</trigger>
@@ -400,6 +428,12 @@
 			<trigger>play on a successful interference check</trigger>
 			<rule>end the enemy's turn immediately</rule>
 			<rule>gain 2 AP for your subsequent turn</rule>
+		</card>
+		<card>
+			<label>Moment of Truth</label>
+			<trigger>play on the beginning of the 4th round or later</trigger>
+			<rule>choose a model from your team and assign a random veteran gimmick</rule>
+			<problem>just an idea</problem>
 		</card>
 		<card>
 			<label>Entrench</label>
@@ -424,10 +458,12 @@
 			<trigger>play at any time during your turn</trigger>
 			<rule>instantly gain AP equal to the number of team members gone out of action</rule>
 		</card>
-		<card>
-			<label>Carnage</label>
+		<card class="leadership">
+			<!--<label>Carnage</label>-->
+			<label>Strike as One!</label>
+			<require>Leader</require>
 			<trigger>play at any time during your turn</trigger>
-			<rule>perform a free melee attack with every team member in melee range to an enemy model</rule>
+			<rule>perform a free attack with every team member</rule>
 		</card>
 		<card>
 			<label>Raise the Pressure</label>
@@ -465,18 +501,29 @@
 			<trigger>play at any time during your turn</trigger>
 			<rule>creates a wall of flames up to a width of 6 inches in any unoccupied space on the battle field for the rest of the battle which attacks any one who tries to pass through with +1</rule>
 		</card>
+		<card class="techno-magic">
+			<label>Telekinesis</label>
+			<require>Techno/Mage</require>
+			<trigger>play at any time during your turn</trigger>
+			<rule>the Techno/Mage may perform a complex action or help someone up by line of sight (paying the required APs)</rule>
+		</card>
 		<card class="leadership">
 			<label>Regroup!</label>
 			<require>Leader</require>
 			<trigger>play at the end of your turn</trigger>
 			<rule>redeploy any number of models in melee into base contact around the leader model</rule>
 		</card>
-		<card class="leadership">
+		<card>
+			<label>Lucky Shot</label>
+			<trigger>play at any time</trigger>
+			<rule>perform a free ranged action with one of your team members</rule>
+		</card>
+		<!-- <card class="leadership">
 			<label>Strike as One!</label>
 			<require>Leader</require>
 			<trigger>play before performing a melee action with a leader model</trigger>
 			<rule>applies +1 to a melee action of the leader model and any subsequent melee action of team members during that turn</rule>
-		</card>
+		</card> -->
 		<card class="leadership">
 			<label>Join Me!</label>
 			<require>Leader</require>
